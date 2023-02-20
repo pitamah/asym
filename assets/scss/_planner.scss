@@ -1,0 +1,176 @@
+/*--------------------------------------------------------------
+
+# Planner - Author - Anniiket Pandit
+
+--------------------------------------------------------------*/
+
+
+/* Filter dropdown */
+.planner {
+
+    padding: 15px 0 0 0;
+  
+    @media (max-width: 1199px) {
+      padding: 10px 0;
+    }
+
+    .card {
+      border-radius: $br-s;
+      border: 1px solid $white;
+      height: auto;
+    }
+
+    .card-body {
+      padding: 0;
+  }
+  
+    .card-title {
+      color: $secondary;
+      padding: 15px 15px 0;
+  }
+  
+    .filter {
+      position: absolute;
+      right: 0px;
+      top: 15px;
+  
+      .icon {
+        color: lighten($tertiary, 50);
+        padding-right: 20px;
+        padding-bottom: 5px;
+        transition: 0.3s;
+        font-size: 16px;
+        &:hover, &:focus {
+          color: $primary;
+        }
+      }
+  
+      .dropdown-header {
+        padding: 8px 15px;
+      }
+  
+      .dropdown-header h6 {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: lighten($tertiary, 50);
+        margin-bottom: 0;
+        padding: 0;
+      }
+  
+      .dropdown-item {
+        padding: 8px 15px;
+      }
+    }
+  }
+  
+  /* Info Cards */
+  .planner {
+    .info-card {
+      padding-bottom: 0px;
+      h6 {
+        font-size: 28px;
+        color: $secondary;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  
+    .card-icon {
+      font-size: 32px;
+      line-height: 0;
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  
+    .planner-card {
+        padding: 0;
+
+      .card-icon {
+        color: $secondary;
+        margin-right: 20px;
+      }
+    }
+  
+
+/* Planner Items */
+ul.planner-items {
+            
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        display: block;
+        background-color: lighten($secondary, 35);
+        padding: 5px 20px;
+        
+        a { 
+            color: $secondary;
+        
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+}
+   
+  
+  /* Activity */
+  .planner {
+    .activity {
+      font-size: 14px;
+  
+      .activity-item {
+  
+        .activite-label {
+          color: #888;
+          position: relative;
+          flex-shrink: 0;
+          flex-grow: 0;
+          min-width: 64px;
+  
+            &::before {
+              content: "";
+              position: absolute;
+              right: -11px;
+              width: 4px;
+              top: 0;
+              bottom: 0;
+              background-color: lighten($primary, 36);
+          }
+        }
+  
+        .activity-badge {
+          margin-top: 3px;
+          z-index: 1;
+          font-size: 11px;
+          line-height: 0;
+          border-radius: 50%;
+          flex-shrink: 0;
+          border: 3px solid #fff;
+          flex-grow: 0;
+        }
+        
+        .activity-content {
+          padding-left: 10px;
+          padding-bottom: 20px;
+        }
+  
+        &:first-child  .activite-label::before {
+          top: 5px;
+        }
+  
+        &:last-child  .activity-content {
+         padding-bottom: 0;
+        }
+  
+      }
+  
+    }
+  
+  }  
+  }

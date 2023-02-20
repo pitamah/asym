@@ -1,0 +1,863 @@
+<!-- User's Shelf - Author - Anniiket Pandit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>My Library - Asymmetrical.ai</title>
+  <meta content="author" name="Anniiket Pandit">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/asym_logo.png" rel="asym-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="headerWrapper">
+    <header id="header" class="header d-flex align-items-center">
+
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="#" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="Asymmetrical Triangular Logo">
+          <span class="d-none d-lg-block">asymmetrical.ai</span>
+        </a>
+      </div><!-- End Logo -->
+
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+
+      <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+          <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+      </div><!-- End Search Bar -->
+
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+
+          <li class="nav-item d-block d-lg-none">
+            <a class="nav-link nav-icon search-bar-toggle " href="#">
+              <i class="bi bi-search"></i>
+            </a>
+          </li><!-- End Search Icon-->
+
+          <li class="nav-item dropdown">
+
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a><!-- End Notification Icon -->
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+              <li class="dropdown-header">
+                You have 4 new notifications
+                <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-exclamation-circle text-warning"></i>
+                <div>
+                  <h4>Lorem Ipsum</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>30 min. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-x-circle text-danger"></i>
+                <div>
+                  <h4>Atque rerum nesciunt</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>1 hr. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-check-circle text-success"></i>
+                <div>
+                  <h4>Sit rerum fuga</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>2 hrs. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li class="notification-item">
+                <i class="bi bi-info-circle text-primary"></i>
+                <div>
+                  <h4>Dicta reprehenderit</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">Show all notifications</a>
+              </li>
+
+            </ul><!-- End Notification Dropdown Items -->
+
+          </li><!-- End Notification Nav -->
+
+          <li class="nav-item dropdown pe-3">
+
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+              <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block dropdown-toggle ps-2">Kishore Sahani</span>
+            </a><!-- End Profile Iamge Icon -->
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <li class="dropdown-header">
+                <h6>Kishor Sahani</h6>
+                <span>6th Standard</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-person"></i>
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-gear"></i>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-question-circle"></i>
+                  <span>Need Help?</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+
+            </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+
+        </ul>
+      </nav><!-- End Icons Navigation -->
+
+    </header>
+  </div>
+  <!-- End Header -->
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="bi bi-house-door"></i>
+          <span>Home</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-book"></i><span>Read</span></i>
+        </a>
+      </li><!-- End Read Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-pencil-square"></i><span>Write</span></i>
+        </a>
+      </li><!-- End Write Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-people"></i><span>Community</span></i>
+        </a>
+      </li><!-- End Community Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-keyboard"></i><span>Q & A</span></i>
+        </a>
+      </li><!-- End Q & A Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-code-square"></i><span>Coding</span></i>
+        </a>
+      </li><!-- End Coding Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-calendar4-week"></i><span>Planner</span></i>
+        </a>
+      </li><!-- End Planner Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="bi bi-controller"></i><span>Games</span></i>
+        </a>
+      </li><!-- End Games Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <!-- #Main -->
+  <main id="main" class="main">
+    <div class="contentWrapper">
+      <div class="home-pagetitle">
+        <h1>Terms Of Use</h1>
+        <section class="section whats-new">
+          <!-- nothing here yet -->
+        </section>
+      </div><!-- End Page Title -->
+
+      <div class="innerWrapper">
+        <div class="row">
+          <!-- My Shelf -->
+          <div class="col-lg-12 terms-of-use">
+            <div class="col-lg-12 p-2 mx-auto">
+              <h6 class="mb-3"> THE FOLLOWING ARE THE TERMS AND CONDITIONS FOR USE OF THE ASYMMETRICAL.AI WEBSITE,
+                SERVICES AND THE SOFTWARE (AS DEFINED BELOW)
+                PROVIDED FOR THE APPLICATION, WEBSITE AND SERVICES RELATED THERETO. PLEASE READ THEM CAREFULLY. </h6>
+              <p> BY CHECKING THE BOX “I HAVE READ AND AGREE TO THE TERMS OF SERVICE AND THE PRIVACY POLICY”, COMPLETING
+                THE REGISTRATION PROCESS AND/OR USING
+                THE APPLICATION, WEBSITE OR THE SERVICES OR THE SOFTWARE, YOU ARE STATING THAT YOU READ, UNDERSTOOD AND
+                AGREE TO BE BOUND BY ALL OF THE TERMS AND
+                CONDITIONS OF THESE TERMS OF SERVICE (the “Terms”). The Services are offered to you subject to your
+                acceptance and compliance without any
+                modification of these Terms. Asymmetrical.ai Ltd. (herein referred to as “we”, “us”, or “Company”)
+                offers services for engaging in an online game
+                that teaches real computer programming to children via its websites <a href="https://Asymmetrical.ai"
+                  target="_blank">https://Asymmetrical.ai</a>. These Terms govern your access to and use of the
+                Website, App, services and the Software used in connection thereto (collectively with the Website and
+                the App, the “Service”). If you are using the
+                Service on behalf of an organization, you accept these Terms on behalf of such organization and
+                represents that you have the authority to bind such
+                organization (and accordingly, “you” and “your” will refer to such organization). We reserve the right
+                at any time and without any notice, to modify
+                or change the Service, including by eliminating, modifying, limiting or discontinuing any feature of the
+                Service. Your continued use of the Service
+                after such change will be deemed acceptance of such changes to the Service. Note: Some of the terms
+                provided herein may be less relevant to
+                visitors of our Website which are not registered users, however, all other provisions apply to all
+                visitors and users entering or using the Service.
+              </p>
+              <h5 class="sub-title">1. REGISTRATION, USER ACCOUNT, PASSWORD, SECURITY AND ELIGIBILITY</h5>
+              <p> You must provide truthful, accurate, and current information about yourself (including your email
+                address) during the registration and account
+                signup process (the “Registration Data”), and maintain and update your Registration Data so that it
+                remains at all times accurate, current and
+                complete. The truthfulness, and accuracy of such information, is at your sole responsibility. As part of
+                the account setup and registration process,
+                you will choose a login and a password. You will be solely responsible for maintaining the
+                confidentiality and use of your password, and agree not
+                to transfer your use of, or access to, the Service to any third party. You are fully and solely
+                responsible for any and all activities that occur
+                through your account. You may only use your account to access the Service, and any use of another's
+                user's account may lead to revocation of your
+                account. We cannot and will not be liable for any loss and/or damage resulting from any use of your
+                account which is unauthorized. You agree to
+                immediately notify us of any unauthorized use of your password or account or any other breach of
+                security, and to simultaneously reset your password.
+              </p>
+              <h5 class="sub-title">Schools Responsibilities.</h5>
+              <p> If you are a school, or a representative of a school (e.g. a teacher), wishing to use the Service for
+                the benefit of your students, and you want
+                to allow your students to use the Service, please ensure that you comply with the following guidelines
+                and instructions: </p>
+              <p> (i) You are responsible to open and maintain the accounts for your students. We strongly recommend not
+                to use your students' personal information
+                (e.g. full name) when creating their accounts. </p>
+              <p> (ii) By submitting your students' information to Asymmetrical.ai, you expressly grant, and you
+                represent and warrant that you have all rights
+                necessary to grant to us a non-exclusive, royalty-free, worldwide license, during the term of these
+                Terms, to use, transmit, distribute, modify,
+                reproduce, display, create derivative works of, and store the student's data (and all User Content), as
+                detailed in these Terms, and specifically,
+                for the purposes of (i) providing the Service as contemplated in these Terms, and (ii) enforcing our
+                rights hereunder. </p>
+              <p> (iii) Pursuant to the Children's Online Privacy and Protection Act (“COPPA”) we are required to obtain
+                clear and verifiable parental consent
+                before receiving personal information from children under 13. Because Asymmetrical.ai provides the
+                Service to you, for the benefit of your students,
+                we rely on you to obtain and provide appropriate consent, if needed, to collect student information. You
+                hereby represent and warrant that you have
+                the full authority and rights to provide such consent to collect information from your students before
+                allowing students under 13 to access the
+                Service, and that you have provided appropriate disclosure to students and their parents for sharing the
+                student's information with us. When
+                obtaining such consents, you must provide parents with a copy of these Terms and of our privacy policy.
+                You must keep all consents on file and
+                provide them to us upon request. </p>
+              <p> If you are a child under the age of 13, we may need the consent of your parents or legal guardian
+                prior to allowing you to use the Service.
+                In addition, you may not be able to register to the Website or the App and/or to use all the features of
+                the Service. </p>
+              <h5 class="sub-title">2. NONEXCLUSIVE LICENSE TO THE SERVICE</h5>
+              <p> Subject to and conditioned upon your acceptance of these Terms and your ongoing compliance with these
+                Terms, we grant to you a non-exclusive,
+                non-transferable, non-sublicensable, revocable right to access and use the Service solely for your own
+                personal use. Please note that certain
+                content and features of the App will only be available for subscribed users who have paid a license Fee
+                in accordance with Section 7 below. </p>
+              <p> Your license of, use of and access to the Service is conditioned upon your compliance with these
+                Terms, including without limitation,
+                the following Rules of Conduct. </p>
+              <h5 class="sub-title">3. RULES OF CONDUCT</h5>
+              <p> You may not use the Service for any illegal or unauthorized purpose, nor violate any applicable laws
+                (including, but not limited to, copyright
+                and privacy laws). You are solely responsible for any and all activities that relate to your account.
+                Without derogating of the above, you may not
+                use the Service in connection with any content (“Account Content”) that is illegal (in any applicable
+                jurisdiction), or may infringe or promote the
+                infringement of any copyright, patent, trademark, service mark, trade secret, moral right, or other
+                intellectual or proprietary right of any party.
+                We may terminate your access to and use of the Service immediately if you fail to comply with the above
+                rules. </p>
+              <p> You will not, nor will you allow any third party to: (i) copy, distribute, modify, adapt, translate or
+                otherwise create derivative works of the
+                Service in any medium; (ii) reverse engineer, de-compile, disassemble or otherwise attempt to discover
+                the source code of the Service, or the
+                software used by us to operate the Service, the Website or the App, as applicable (collectively the
+                “Software”); (iii) rent, lease, sell, sublicense,
+                assign or otherwise transfer rights in or to the Software or the Service; (iv) remove any proprietary
+                notices or labels on the Software or placed by
+                the Service; or (v) use, post, transmit or introduce any device, software or routine which interferes or
+                attempts to interfere with the operation of
+                the Service. You will use the Software and Service solely for your own internal use, and will not make
+                the Software or Service available for
+                timesharing, application service provider or service bureau use. You will comply with all applicable
+                laws and regulations in your use of and access
+                to the Software and Service. The license will expire immediately upon failure to comply with these
+                Terms. Upon such expiration, you must destroy all
+                originals and copies of the Software and so certify in writing to us within 5 business days of
+                termination and cease any further use of the Service;
+                or (iv) access or attempt to access any content on the App which is not available to you based on your
+                subscription to the Services. </p>
+              <h5 class="sub-title">4. INTELLECTUAL PROPERTY POLICY</h5>
+              <p> The Service and the Software and all Intellectual Property Rights in the Service and Software are, and
+                shall remain, our exclusive property.
+                All rights in and to the Service and Software are hereby expressly reserved and retained by us without
+                restriction, including, without limitation,
+                our right to sole ownership of the Software and documentation, logos, trademarks, images, text,
+                graphics, illustrations, audio, videos, music and
+                trade secrets. You are only granted a limited license to access and use the Service as detailed in
+                Section 2 above. </p>
+              <p> “Asymmetrical.ai”, ”The Asymmetrical.ai Research Facility”, the Company's logo and other graphics,
+                logos, and service names are trade-names and
+                trademarks of the Company. Such trademarks may not be used in connection with any product or service
+                that is not our product, or in any manner that
+                disparages or discredits the Company. </p>
+              <p> You agree not to (and not to allow any third party to): (a) use the trademarks, trade names, service
+                marks, logos, domain names and other
+                proprietary rights associated with the Service for any purpose without our express written consent; (b)
+                register, attempt to register, or assist
+                anyone else to register any trademark, trade name, serve marks, logos, domain names and other
+                proprietary rights associated with the Company; or (c)
+                remove, obscure, or alter any notice of copyright, trademark, or other proprietary right appearing in or
+                on any item included with the Service or the
+                Software. Any ideas, requests, feedbacks, recommendations, error and bug reports, comments, concepts,
+                additional features and other requests or
+                suggestions (collectively “Ideas”) that you may provide us will be owned by us. You hereby irrevocably
+                assign and transfer any Intellectual
+                Property Rights in such Ideas to us, free of charge. You agree that the same will automatically become
+                our property and that we shall be entitled
+                to use, exploit, implement, adapt, develop, copy, reproduce, publish, license or assign the rights to
+                such materials and Ideas without any obligation
+                to make any royalty or other payment to you, and without any obligation of credit or notice to you. If
+                you intend to retain any Intellectual Property
+                Rights in your Ideas please do not submit them to us without our prior written approval. </p>
+              <p> You authorize us to use your company's name, logo and other applicable trademarks, at any time, for
+                the purpose of referencing you as a customer of
+                the Service or in other promotional marketing materials. If you do not wish to be referenced please
+                contact us. </p>
+              <h5 class="sub-title">5. USER CONTENT</h5>
+              <p> While using the Service, you agree not to (a) upload, post, process, reproduce, distribute, send or
+                otherwise transfer or make available
+                (collectively “Transmit” and “User Content” respectively) any content that is, in any jurisdiction were
+                so Transmitted, illegal, abusive, obscene,
+                defamatory, inflammatory, libelous, hateful, or racially, ethnically, sexually or otherwise
+                objectionable (including links to other websites showing
+                any of the forgoing); (b) Transmit any User Content that may infringe or promote the infringement of any
+                copyright, patent, trademark, service mark,
+                trade secret, sui generis right, moral right, celebrity right, right of attribution, or other
+                intellectual or proprietary right of any party or any
+                application for any of the forgoing (“Intellectual Property Right”);(c) Transmit any material that
+                contains software viruses, worms, Trojan horses,
+                defects, date bombs, time bombs or any other malicious code, files or programs designed to interrupt,
+                destroy or limit the functionality of any
+                computer software or hardware or telecommunications equipment; (d) disrupt or interfere with the
+                security of, or otherwise abuse, the Service, its
+                system resources, accounts, servers, or networks connected to or accessible through the Company or
+                affiliated or linked websites or access, hack or
+                deface any portion of the Company, tamper with or use non-public areas of the Company; (e) Transmit
+                false or misleading information or falsely
+                represent yourself as any other person, or misrepresent yourself as a representative or affiliate of any
+                person or entity or as another client; (f)
+                disrupt or interfere with any other user's use or enjoyment of the Service or affiliated or linked
+                websites or use the account or password of others;
+                (g) Use any information obtained from the Service in order to harass, abuse, or harm another person; or
+                (h) express or imply that any statements you
+                make are endorsed by us, without our prior written consent; (i) sublicense, sell, lease, or rent the
+                Service, whether or not for consideration; (j)
+                decompile, disassemble, or reverse engineer the Services; (k) sharing of password and/or username and
+                simultaneous access to the Services, via the
+                same password and/or username or otherwise. </p>
+              <p> You hereby acknowledge that you may only upload User Content that is in formats supported by the
+                Service, as may be presented to you by the Company
+                (as may be amended from time-to-time). User Content in non-supported formats may not display or work
+                properly, and therefore you are required to
+                convert any User Content into a supported format prior to uploading it. We reserve the right, at our
+                sole discretion, to remove any User Content
+                that is in a non-supported format. Ownership and License in User Content. We do not claim ownership of
+                any copyright in your User Content. You hereby
+                represent towards Asymmetrical.ai that you either own or have sufficient license to upload or use any
+                User Content you upload to the Service. You
+                continue to retain all ownership rights in such User Content. Notwithstanding the foregoing, by
+                Transmitting User Content to the Service, you
+                expressly grant, to Asymmetrical.ai a non-exclusive, perpetual, irrevocable, worldwide royalty-free,
+                sublicensable, transferable, license to use,
+                reproduce, distribute, syndicate, publish, publicly perform, publicly display, modify, translate, edit
+                and make derivative works of all such User
+                Content, in whole or in part, and in any form, media or technology, for use in connection with the
+                Service and our Asymmetrical.ai's (and its
+                successors' and affiliates') business, including without limitation for promoting and redistributing part or all of the Service (and derivative works thereof)
+                in any media formats and through any media
+                channels. </p>
+              <p> You also hereby grant each User of the Service a non-exclusive license to access your User Content
+                through the Service, and to use, display,
+                reproduce and perform such User Content solely as permitted through the functionality of the Service and
+                under these Terms of Use. Without derogating
+                of the above, we may preserve User Content (including, Confidential Information) and may also, in our
+                sole discretion, disclose any such User
+                Content and the circumstances surrounding the Transmission or use thereof, in order to (a) operate the
+                Service; (b) protect the rights, property,
+                or personal safety of the Company, our affiliates, contractors, employees, partners, licensors, and
+                users or the public; (c) comply with legal
+                obligations, governmental requests or other legal process; (d) enforce these Terms; (e) respond to
+                claims that any content violates the rights of
+                third-parties. You hereby acknowledge that we may or may not screen User Content. Asymmetrical.ai and
+                its staff have the right, but no obligation,
+                in its sole discretion, to remove any User Content. With no restriction to the mentioned above,
+                Asymmetrical.ai and its staff have the right to
+                check, deny, or remove any User Content if it violates any of these Terms, or is otherwise
+                objectionable. You agree that you must evaluate the
+                use of any User Content uploaded by another user, and that you are responsible for the associated risks,
+                including, any reliance on the mentioned
+                User Content's accuracy, completeness, or usefulness. </p>
+              <h5 class="sub-title">5.1 DMCA Policy</h5>
+              <p> Asymmetrical.ai respects the intellectual property rights of others and expects you to do the same. If
+                you believe that your copyrighted work has
+                been copied in a way that constitutes copyright infringement and is accessible on this site, you may
+                notify our designated copyright agent, as set
+                forth in the Digital Millennium Copyright Act of 1998 (DMCA) (such act may be found on the U.S.
+                Copyright Office website at
+                http://www.copyright.gov/legislation/dmca.pdf. Upon receipt of such notice as described below, we will
+                take whatever action, in our sole discretion,
+                we deem appropriate, including removal of the challenged content from the web site or any Service. For
+                your complaint to be valid under the DMCA,
+                you must provide us with the following information when providing notice of the claimed copyright
+                infringement: </p>
+              <p> 1. Identify the copyrighted work that you claim has been infringed (or a preventative list of the
+                copyrighted works - if multiple copyrighted
+                works are the subject matter of such notice). </p>
+              <p> 2. Identify the material or link you claim is infringing (or the subject of infringing activity) and
+                that is to be removed. </p>
+              <p> 3. Include the following statements: <br>a. “I hereby state that I have a good faith belief that the
+                disputed use of the copyrighted material
+                is not authorized by the copyright owner, its agent, or the law.” <br>b. “I hereby state that the
+                information in this notice is accurate and,
+                under penalty of perjury, that I am the owner, or authorized to act on behalf of, the owner, of the
+                copyright or of an exclusive right under
+                the copyright that is allegedly infringed.” <br>4. Provide your company affiliation (if applicable),
+                mailing address, telephone number, and,
+                if available, email address. <br>5. Provide your full legal name and your electronic or physical
+                signature. If you believe in good faith that
+                a notice of copyright infringement has been wrongly filed by Asymmetrical.ai against you, the </p>
+              <p> DMCA permits you to send Asymmetrical.ai a counter- notice. If a counter-notice is received by
+                Asymmetrical.ai, we may send a copy of the
+                counter- notice to the original complaining party informing that person that it may replace the removed
+                content or cease disabling it in ten
+                business days. Unless the copyright owner files an action seeking a court order against Asymmetrical.ai
+                or the person who has posted allegedly
+                infringing content, the removed content may be replaced, or access to it restored, in ten business days
+                or more after receipt of the Counter-Notice. </p>
+              <p> Notices and counter-notices must meet the then-current statutory requirements imposed by the DMCA; see
+                http://www.copyright.gov for details. </p>
+              <p> All claims of copyright infringement for the Site should be addressed to: <a
+                  href="#">hello@asymmetrical.ai</a>
+              </p>
+              <h5 class="sub-title">6. TERM AND TERMINATION; CONSEQUENCES OF TERMINATION</h5>
+              <p> You may cease using the Service at any time. We may terminate, modify or change the Service at any
+                time, and without providing any prior notice.
+                We may cease support and/or distribution of the App at any time, or change the content that is available
+                for each type of subscription or access to
+                the Services, without providing any prior notice. We may also permanently or temporarily suspend and
+                deactivate your account and/or your access to
+                use the Service for any reason (without an obligation to provide you with such reason), and you shall
+                not have any claim, demand or assertion
+                towards us. Any violation of these Terms may result, inter alia, in termination of your ability to
+                access and use the Service. If you default
+                in the performance of any of your obligations under these Terms we may immediately, without derogating
+                from any other right we may have under these
+                Terms and/or any applicable law, deactivate or suspend your account and/or your access to and use of the
+                Service or any portion thereof and/or
+                terminate these Terms. We shall not be liable to you or to any third-party for any termination of your
+                access to the Service. </p>
+              <p> Upon expiration or termination of these Terms for any reason, all rights granted to you hereunder
+                shall immediately terminate. The expiration or
+                termination of these Terms shall not relieve you or us of any obligation intended to survive under these
+                Terms including without litigation the
+                obligations specified in Section 4 above. </p>
+              <h5 class="sub-title">7. FEES AND PAYMENTS</h5>
+              <p> If you sign up for a paid subscription plan, you shall pay to the Company in advance the fees detailed
+                under the specific plan (“Fees”). The Fees
+                are for the right to use the Service during the term specified under the specific plan, and do not
+                include any other services. Unless otherwise
+                explicitly detailed in these Terms, all amounts owed to the Company are non-cancellable and Fees paid
+                are non-refundable. </p>
+              <p> The Fees shall be due and payable immediately and as a condition to commence the use of the Service.
+              </p>
+              <p> All fees payable hereunder, do not include local, state, or federal sales, use, excise, personal
+                property, VAT or other similar taxes or duties,
+                including, without limitation, any withholding tax, and any such taxes, to the extent legally
+                applicable, shall be borne and paid by you. For the
+                avoidance of doubt, you shall not be responsible for any payment of taxes based on Company's net income.
+                Company may use various billing service
+                providers. When using such provider's services, you agree to follow and comply with the policies of such
+                provider. </p>
+              <h5 class="sub-title">8. INDEMNIFICATION</h5>
+              <p> You hereby agree to indemnify, defend and hold us, and our directors, officers, employees,
+                consultants, agents and other representatives,
+                harmless from and against any and all damages, costs, expenses, obligations, losses, liabilities and
+                debts related to or arising out of
+                (including reasonable attorneys' fees): (a) your breach of these Terms; (b) any misuse of your account
+                by you and any third party on your
+                behalf, (c) any breach of your representations and warranties set forth herein; (d) infringement of any
+                third party Intellectual Rights. </p>
+              <h5 class="sub-title">9. DISCLAIMER OF WARRANTIES</h5>
+              <p> You understand and agree that the website, app, service and software are provided on an “as is” and
+                “as available” basis. To the fullest
+                extent permissible pursuant to applicable law, we, our service providers, agents, and sub-contractors
+                disclaim all warranties of any kind,
+                express or implied, including, without limitation, implied warranties of title, non-infringement,
+                accuracy, merchantability, and fitness for a
+                particular purpose. </p>
+              <p> We, our service providers, agents and sub-contractors do not warrant that: (a) the service will meet
+                your requirements or expectations; (b)
+                your use of the service will be uninterrupted and available everywhere; or (c) that defects, if any,
+                will be corrected. </p>
+              <p> The foregoing exclusions and disclaimers are an essential part of these terms and formed the basis for
+                determining the price charged for
+                the service. Some states do not allow exclusion of an implied warranty, so this disclaimer may not apply
+                to you. Your sole and exclusive
+                remedy for any failure or nonperformance of the service shall be for Asymmetrical.ai to use commercially
+                reasonable efforts to adjust or
+                repair the service. </p>
+              <h5 class="sub-title">10. LIMITATION OF LIABILITY</h5>
+              <p> We shall not be liable for any indirect, incidental, consequential, special, exemplary, or punitive
+                damages (including, without limitation,
+                damages for loss of business, loss of goodwill, loss of data, lost profits or other intangible losses),
+                under any theory of law including under
+                contract, negligence, strict liability, breach of any statutory duty, or otherwise arising out of or
+                relating in any way to the service
+                (even if we have been advised of the possibility of such damages and even if a remedy fails of its
+                essential purpose). Some jurisdictions
+                may not allow the limitation or exclusion of liability for incidental or consequential damages, so some
+                of the above may not apply to you.
+                In such jurisdictions, liability is limited to the fullest extent permitted by law. You further agree
+                that we shall have no responsibility
+                for any damages suffered by you in connection with loss of data, errors, system down time, network or
+                system outages, communications line failure,
+                file corruption, or service interruptions caused by the negligence of either us or our sub-contractors
+                and service providers, all in irrespective
+                of the theory upon which any claim may be based, even if we have been advised of the possibility of such
+                damages. </p>
+              <p> Notwithstanding anything to the contrary contained herein, our liability to you or any other party for
+                any cause whatsoever and regardless
+                of the form of the action, will at all times be limited to the amounts paid by you to us for the
+                services provided during the three (3) months
+                preceding the circumstances first giving rise to the claim of liability. </p>
+              <h5 class="sub-title"> 11. LINKS TO OTHER RESOURCES; THIRD PARTY&#39;S PRODUCTS AND SERVICES </h5>
+              <p> We may provide hyperlinks to other websites or resources. Because we have no control over such sites
+                and resources, you acknowledge and agree
+                that we shall not be responsible for the availability of such sites or resources, nor shall we be
+                responsible or liable for any content,
+                advertising, products or other materials on or available from such sites or resources. When you access
+                these third-party sites you do so
+                at your own risk, and you should refer to each such website's individual “Terms of Service” and not rely
+                on these Terms in anyway. </p>
+              <p> Customer acknowledges that the Service uses and/or contains certain software, products and services
+                which were developed and owned by
+                third parties, the use of which is governed by terms and conditions of such third parties (“Third Party
+                Products and Services”). Accordingly,
+                Customer agrees that we will not be responsible for such Third Party Products and Services nor for any
+                error, malfunction or defect in the
+                Service resulted therefrom. </p>
+              <h5 class="sub-title">12. MISCELLANEOUS</h5>
+              <p> No waiver by Company of any default shall be deemed a waiver of any prior or subsequent default of the
+                same or other provisions of these
+                Terms, nor shall any delay or omission on the part of Company to exercise or avail itself of any right
+                or remedy that it has or may have
+                hereunder operate as a waiver of any right or remedy. If any provision hereof is held invalid or
+                unenforceable by a court of competent
+                jurisdiction, such invalidity shall not affect the validity or operation of any other provision and such
+                invalid provision shall be
+                deemed to be severed from these Terms. We may freely assign our rights and responsibilities hereunder
+                without notice to you.
+                These Terms are not assignable, transferable or sublicenseable by you except with our prior written
+                consent. </p>
+              <p> These Terms are a contract between you and the Company. The Terms constitute the entire understandings
+                between you and us, and revoke
+                and supersede all prior agreements between us, and are intended as a final expression of our agreement.
+                These Terms shall take precedence
+                over any other documents that may be in conflict therewith. Any heading, caption or section title
+                contained in these Terms is inserted
+                only as a matter of convenience and in no way defines or explains any section or provision hereof. We
+                reserve the right at any time to
+                modify these Terms. Any such modification will be effective immediately upon notice to you (or if
+                otherwise stated in the notice),
+                which we may provide by any means including, without limitation, posting the amended Terms on our
+                website or by sending an electronic mail to you.
+                Your continued use of the Service after the effective date of any such modifications will be deemed
+                acceptance of such modified Terms. </p>
+              <p> These Terms shall be construed in accordance with and governed for all purposes by the substantive
+                laws of the State of Israel without
+                regard to its conflicts of law provisions. You agree that any claim or dispute you may have against the
+                Company and its affiliates, directors,
+                officers, employees and representatives must be resolved by a court located in London, UK, and waive any
+                jurisdictional, venue or inconvenient
+                forum objections to such courts. </p>
+              <h5 class="sub-title">QUESTIONS OR CONCERNS</h5>
+              <p> Any notice regarding these Terms of Service should be sent to <a
+                  href="mailto:hello@asymmetrical.ai">hello@asymmetrical.ai</a>
+              </p>
+            </div>
+          </div>
+          <!-- End My Shelf - Start Suggested for you -->
+
+
+        </div>
+      </div>
+    </div>
+  </main><!-- End #main -->
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="footer-links">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>asymmetrical.ai</h2>
+          <h4>Ready to learn?</h4>
+          <div>
+            <a href="#" class="btn btn-tertiary">Let's Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <h5>Our Offerings</h5>
+          <a href="#">Home</a>
+          <a href="#">Reading</a>
+          <a href="#">Writing</a>
+          <a href="#">Coding</a>
+          <a href="#">Speaking (coming soon)</a>
+        </div>
+        <div class="col-lg-3">
+          <h5>Resources</h5>
+          <a href="#">Price Plan</a>
+          <a href="#">Magazines</a>
+          <a href="#">Blogs</a>
+          <a href="#">Subscribe</a>
+        </div>
+        <div class="col-lg-2">
+          <h5>Company</h5>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">FAQs</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="row">
+        <div class="col-lg-3">
+          &copy; Copyright 2023 <strong><span>Asymmetrical.ai</span></strong>. All Rights Reserved.
+        </div>
+        <div class="col-lg-9">
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms_of_use.html">Terms of Use</a>
+          <a href="#">Legal</a>
+          <a href="#">Sales and Refunds</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Extra Large Modal-->
+  <div class="modal fade" id="ExtralargeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Exchange a book</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Your book shelf is full. Select a book you want to exchange and hit the button below.</p>
+          <!-- Card with an image on top -->
+          <div class="row">
+            <div class="col-md-2">
+              <div class="exchange-book-card">
+                <img src="assets/img/book7.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                <div class="exchange-book-card-body">
+                  <h5 class="card-title">Detective Deductif</h5>
+                </div>
+              </div><!-- End Card with an image on top 1 -->
+            </div>
+            <div class="col-md-1">
+              <div class="row">
+                <div class="col-md-12">
+                  <i class="book-exchange-icon bi bi-arrow-left-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-2 p-1">
+                  <div class="exchange-book-card">
+                    <img src="assets/img/book8.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                    <div class="exchange-book-card-body">
+                      <h5 class="card-title">Born Survivors</h5>
+                    </div>
+                  </div><!-- End Card with an image on top 1 -->
+                </div>
+                <div class="col-md-2 p-1">
+                  <div class="exchange-book-card">
+                    <img src="assets/img/book9.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                    <div class="exchange-book-card-body">
+                      <h5 class="card-title">Newton and Me</h5>
+                    </div>
+                  </div><!-- End Card with an image on top 2 -->
+                </div>
+                <div class="col-md-2 p-1">
+                  <div class="exchange-book-card">
+                    <img src="assets/img/book10.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                    <div class="exchange-book-card-body">
+                      <h5 class="card-title">Sedimentary Rocks</h5>
+                    </div>
+                  </div><!-- End Card with an image on top 3 -->
+                </div>
+                <div class="col-md-2 p-1">
+                  <div class="exchange-book-card">
+                    <img src="assets/img/book11.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                    <div class="exchange-book-card-body">
+                      <h5 class="card-title">Animal Homes</h5>
+                    </div>
+                  </div><!-- End Card with an image on top 4 -->
+                </div>
+                <div class="col-md-2 p-1">
+                  <div class="exchange-book-card">
+                    <img src="assets/img/book12.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                    <div class="exchange-book-card-body">
+                      <h5 class="card-title">Fibonacci Zoo</h5>
+                    </div>
+                  </div><!-- End Card with an image on top 5 -->
+                </div>
+                <div class="col-md-2 p-1">
+                  <div class="exchange-book-card">
+                    <img src="assets/img/book13.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                    <div class="exchange-book-card-body">
+                      <h5 class="card-title">The Great Divide</h5>
+                    </div>
+                  </div><!-- End Card with an image on top 6 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Exchange Book</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Extra Large Modal-->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

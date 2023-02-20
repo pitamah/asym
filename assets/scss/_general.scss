@@ -1,0 +1,316 @@
+/*--------------------------------------------------------------
+
+# General - Author - Anniiket Pandit
+
+--------------------------------------------------------------*/
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-default;
+  background-color: $pagebg;
+  color: $default;
+  overflow: auto;
+}
+
+p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lighten($primary, 10);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+}
+
+.highlight-text {
+  color: $primary;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+  margin-top: 0;
+  padding: 0px 20px 20px 0;
+  transition: all 0.3s;
+  @media (max-width: 1199px) {
+    padding: 0px 10px 20px 0;
+  }
+}
+
+
+.contentWrapper {
+  padding: 0;
+  padding-top: 80px;
+  overflow: hidden;
+  
+  @media (max-width: 1199px) {
+    padding: 0 0 10px 0;
+    padding-top: 50px;  
+  }
+}
+
+.innerWrapper {
+  padding: 30px 0 30px 35px;
+  @media (max-width: 1199px) {
+    padding: 0 0 0 10px;
+  }
+}
+
+.section {
+  padding: 15px 0;
+}
+
+.my-shelf-section {
+  padding: 15px 0 0 0;
+}
+
+.suggested-section {
+  overflow:auto;
+  position: static;
+  height: 675px;
+  padding: 15px;
+  margin-top:15px;
+  overflow-y:auto;
+  background-color: lighten($secondary, 35);
+  border-radius: $br-s;
+  @media (max-width:1199px){
+    height:830px;
+    margin-bottom:10px;
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    height:auto;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Search books
+--------------------------------------------------------------*/
+.filter-section{
+  padding: 15px 0 0 0;
+}
+
+.filter-card{
+    margin: 0;
+    border-radius: $br-s;
+    border: 1px solid $white;
+    background-color: white;
+    box-shadow: 0px 2px 20px rgba($secondary, 0.30);
+    height: 100%;
+    padding: 15px 15px 0;
+    @media (max-width: 1199px) {
+        // padding-bottom: 10px;
+        // margin-bottom: 10px;
+    }
+    
+    .row {
+        height: 100%;
+    }
+    a{
+      margin-bottom:20px;
+    }
+}
+
+.filter-card-title{
+    color: $secondary;
+    margin:10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.filter-card .filter-items{
+    list-style-type: none;
+    padding: 0 10px;
+    li{
+      margin-bottom: 10px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Home Page Title
+--------------------------------------------------------------*/
+.home-pagetitle {
+  margin-bottom: 10px;
+  padding: 20px 35px;
+  background-image: linear-gradient(to right, $secondary, $primary);
+  border-top-right-radius: 70px;
+  h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+    font-weight: 200;
+    color: white;    
+  }
+
+  @media (max-width: 1199px) {
+    padding: 20px;
+    background-image: linear-gradient(to right, $secondary, $primary);
+    border-top-right-radius: 40px;
+
+    h1 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+  }
+} 
+
+/*--------------------------------------------------------------
+# Section Titles
+--------------------------------------------------------------*/
+
+.sectionTitle {
+  margin: 0;
+  padding: 0 25px 0 15px;
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+    font-weight: 200;
+    color: $primary;
+  }
+
+  h6 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: $secondary;
+  }
+
+  @media (max-width: 1199px) {
+    border-top-right-radius: 40px;
+
+    h3 {
+      font-weight: 400;
+      padding: 10px 0 0 0;
+    }
+  }
+}
+
+
+
+.modal-title {
+  color: $secondary;
+}
+
+.modal-content {
+  padding: 0 20px 0 15px;
+
+  p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.find-more-books {
+  padding: 50px;
+  text-align: center;
+  background-color: lighten($secondary, 10);
+
+  h6 {
+    font-size: 20px;
+    color: $white;
+    margin-bottom: 30px;
+  }
+}
+
+.read-it-again {
+  width: 82%;
+  overflow-x: hidden;
+  padding: 15px 30px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right:15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: $primary;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+
+  i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+  }
+
+  &:hover  {
+    background: lighten($primary, 8);
+    color: #fff;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# terms of use
+--------------------------------------------------------------*/
+.terms-of-use {
+  h5.sub-title{
+    color: $secondary;
+    margin-top:0px;
+  }
+  p{
+    margin-bottom:20px;
+    line-height: 30px;
+  }
+}
+
+.privacy-policy {
+  h5.sub-title{
+    color: $secondary;
+    margin-top:20px;
+  }
+  h6{
+    margin-top:0.5rem;
+  }
+  p{
+    margin-bottom:20px;
+    line-height: 30px;
+  }
+}
+
+
+.contact {
+  .info-box {
+    h3{
+     font-weight:400;
+   }
+   .h3{
+    font-weight: 400;
+   }
+  }
+  .card{
+    h3{
+      color:$secondary;
+    }
+  }
+}

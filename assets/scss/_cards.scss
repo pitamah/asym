@@ -1,0 +1,197 @@
+/*--------------------------------------------------------------
+
+# Cards - Author - Anniiket Pandit
+
+--------------------------------------------------------------*/
+
+// COMMON CARDS
+
+.card {
+    border-radius: $br-s;
+    box-shadow: 0px 2px 20px rgba($secondary, 0.30);
+
+    @media (max-width: 1199px) {
+        margin-top: 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+
+.card-body {
+    padding: 0 20px 20px 20px;
+  }
+
+//EXCHANGE BOOK CARDS
+.exchange-book-card { 
+    padding: 0px;
+    margin: 0;
+    border-radius: $br-s;
+    border: 1px solid $white;
+    background-color: white;
+    box-shadow: 0px 2px 20px rgba($secondary, 0.30);
+    height: 100%;
+
+    &:active {
+        box-shadow: 0px 0px 1px 4px rgba($secondary, 1);
+    }
+
+    @media (max-width: 1199px) {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }   
+
+}
+
+.exchange-book-card-body {
+    padding: 0 10px;
+
+    .card-title {
+        font-size: 14px;
+    }
+}
+
+.exchange-card-img-top {
+    border-top-left-radius: $br-xs;
+    border-top-right-radius: $br-xs;
+}
+
+.book-exchange-icon {
+    font-size: 50px;
+    color: #CCC;
+}
+
+
+// BOOK CARDS
+.book-card {
+    padding: 0px;
+    margin: 0;
+    border-radius: $br-s;
+    border: 1px solid $white;
+    background-color: white;
+    box-shadow: 0px 2px 20px rgba($secondary, 0.30);
+    height: 100%;
+
+    @media (max-width: 1199px) {
+        // padding-bottom: 10px;
+        // margin-bottom: 10px;
+    }
+    
+    .row {
+        height: 100%;
+    }
+}
+
+.book-card-body {
+    padding: 15px;
+    // margin-left: 10px;
+    
+    @media (max-width: 1199px) {
+        // padding: 0 15px 0 15px;
+        
+    }
+}
+
+.suggested-book-card-body {
+    padding: 15px 15px 15px 30px;
+
+    @media (max-width:1199px) {
+        padding: 15px;
+    }
+}
+
+.book-card-title {
+    font-size: 16px;
+    color: $secondary;
+    padding: 0;
+
+    @media (max-width:1199px) {
+        padding: 10px 0 0;
+    }
+}
+
+.book-card-text {
+    font-size: 14px;
+}
+
+.book-card-links {
+    display: block;
+    a {
+        padding: 4px 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        &:hover {
+            color: lighten($primary, 20);
+        }
+        @media (max-width:1199px) {
+            
+        }
+    }
+    @media (min-width:1199px) {
+        .mobile-break{
+            display:none;
+        }
+    }
+}
+.book-card-links .card-link{
+    padding: 4px 10px 4px 0;
+}
+
+.my-shelf-section .book-card-body{
+    padding:0;
+}
+
+// PLANNER CARD
+
+// CAROUSEL CARD
+$carousel-caption-spacer: 15rem;
+
+.carousel-card {
+    height: auto;
+    padding-bottom: 0;
+
+    @media (max-width: 1199px) {
+        margin-top: 20px;
+    }
+
+    .card-icon {
+      color: #2eca6a;
+      background: lighten(#2eca6a, 44);
+    }
+  }
+
+  .carousel-indicators {
+    margin-bottom: 0;    
+  }
+
+  .carousel-inner {
+    height: 255px;
+    border-bottom-left-radius: $br-s;
+    border-bottom-right-radius: $br-s;    
+
+    img {
+        width: 100%;
+    }
+  }
+.carousel-item{
+    height:100%;
+}
+.carousel-caption {
+    right: 0;
+    left: 0;
+    background-color: rgba($black, 0.75);
+    padding: 10px;
+   
+    @media (max-width: 1199px) {
+        p{
+            font-size: 12px;
+        }
+        h5{
+            font-size: 14px;
+        }
+    }
+    
+  }
+  

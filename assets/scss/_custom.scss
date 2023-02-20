@@ -1,0 +1,63 @@
+/*--------------------------------------------------------------
+
+# Custom - Author - Anniiket Pandit
+
+--------------------------------------------------------------*/
+
+//IMPORT BOOTSTRAP
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+//IMPORT SCSS
+@import 'variables';
+//--- Start Here --
+@import 'override';
+@import 'header';
+@import 'sidebar';
+@import 'dashboard';
+@import 'pages';
+@import 'general';
+@import 'planner';
+@import 'cards';
+@import 'footer';
+@import 'buttons';
+
+
+.bg-primary {
+    background-color: $secondary !important;
+}
+
+
+// ASYMMETRICAL 
+a, a:hover {
+    text-decoration: none;
+}
+
+.thumbnail-fluid {
+    min-height: 180px;
+    width: 100%;
+    height: auto;
+    @media (max-width: 1199px) {
+        // max-height: fit-content;
+        width: 100%;
+    }
+}
+
+.book-rounded-start {
+    border-top-left-radius: $br-s;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: $br-s;
+    
+    @media (max-width: 1199px) {
+        border-radius: $br-s;
+    }
+}
+
+.dropdown-item {
+    color: $secondary;
+}
+
+.progress-bar {
+    background-color: $secondary;
+}

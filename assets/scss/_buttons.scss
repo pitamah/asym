@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+
+# Buttons - Author - Anniiket Pandit
+
+--------------------------------------------------------------*/
+
+
+// PRIMARY
+.btn-primary { 
+    background-color: $primary;
+    border-radius: $br-xs;
+    border: none;
+    padding: 4px 15px;
+
+    &:hover {
+        background-color: darken($primary, 10);
+    }
+}
+
+
+// SECONDARY
+
+.btn-secondary {
+    background-color: $secondary;
+    border-radius: $br-xs;
+    border: none;
+    padding: 4px 15px;
+
+    &:hover {
+        background-color: darken($secondary, 10);
+    }
+}
+
+
+// TERTIARY - ON DARK BACKGROUND ONLY
+
+.btn-tertiary {
+    background-color: $white;
+    border-radius: $br-xxl !important;
+    padding: 10px 40px !important;
+    color: $primary !important;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: 0px 2px 20px rgba($primary, 0.30) !important;
+    width: 300px;
+
+    &:hover {
+        background-color: lighten($secondary, 40) !important;
+        text-decoration: none !important;
+        box-shadow: none !important;
+    }
+    
+}
+
+// NEXT PREVIOUS ARROW BUTTONS
+
+.for-next-prev-btn {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.btn-next-prev {
+    font-size: 50px;
+    cursor: pointer;
+    color: $primary;
+
+    &:disabled {
+        color: lighten($primary, 30);
+    }
+}
