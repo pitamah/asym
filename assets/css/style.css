@@ -14473,8 +14473,18 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .contact .info-box .h3 {
   font-weight: 400;
 }
-.contact .card h3, .contact .card .h3 {
+.contact .card h3, .contact .card .h3, .contact .card h5, .contact .card .h5 {
   color: #486EDD;
+}
+@media (max-width: 1199px) {
+  .contact .card {
+    max-height: 540px;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact .card {
+    margin-bottom: 0;
+  }
 }
 
 .coding .card-body {
