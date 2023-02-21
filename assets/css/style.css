@@ -14477,6 +14477,30 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #486EDD;
 }
 
+.coding .card-body {
+  min-height: 500px;
+}
+@media (max-width: 767.98px) {
+  .coding .card-body {
+    min-height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .coding .card-body {
+    min-height: 525px;
+  }
+}
+.coding .card-body-subscription {
+  padding: 0 20px 20px 20px;
+  min-height: 200px;
+}
+.coding .subscribe-tick {
+  color: green;
+}
+.coding .subscribe-end {
+  color: red;
+}
+
 /*--------------------------------------------------------------
 
 # Planner - Author - Anniiket Pandit

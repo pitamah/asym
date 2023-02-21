@@ -314,3 +314,25 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
+.coding{
+  .card-body{
+    min-height: 500px;
+    @media (max-width: 767.98px){
+      min-height: auto;
+    }
+    @media(min-width: 768px){
+      min-height:525px;
+    }
+  }
+  .card-body-subscription{
+    padding: 0 20px 20px 20px;
+    min-height: 200px;
+  }
+  .subscribe-tick{
+    color:green
+  }
+  .subscribe-end{
+    color:red
+  }
+}
