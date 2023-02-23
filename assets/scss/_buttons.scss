@@ -17,6 +17,19 @@
     }
 }
 
+.btn-primary-big { 
+    background-color: $primary;
+    border-radius: $br-xs;
+    border: none;
+    padding: 10px 30px;
+    font-size: 24px;
+    color:white;
+    &:hover {
+        background-color: darken($primary, 10);
+        color:white;
+    }
+}
+
 
 // SECONDARY
 

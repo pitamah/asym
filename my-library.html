@@ -214,13 +214,13 @@
       </li><!-- End Home Nav -->
 
       <li class="nav-item">
-        <a class="nav-link active" href="#">
+        <a class="nav-link active" href="my-library.html">
           <i class="bi bi-book"></i><span>Read</span></i>
         </a>
       </li><!-- End Read Nav -->
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="write.html">
           <i class="bi bi-pencil-square"></i><span>Write</span></i>
         </a>
       </li><!-- End Write Nav -->
@@ -238,7 +238,7 @@
       </li><!-- End Q & A Nav -->
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="learning.html">
           <i class="bi bi-code-square"></i><span>Coding</span></i>
         </a>
       </li><!-- End Coding Nav -->
@@ -707,7 +707,7 @@
           <div class="col-md-9">
             <div class="row">
             <div class="col-md-2 p-1">
-              <div class="exchange-book-card">
+              <div class="exchange-book-card suggested-book">
                 <img src="assets/img/book8.jpg" class="exchange-card-img-top img-fluid" alt="...">
                 <div class="exchange-book-card-body">
                   <h5 class="card-title">Born Survivors</h5>
@@ -715,7 +715,7 @@
               </div><!-- End Card with an image on top 1 -->
             </div>
             <div class="col-md-2 p-1">
-              <div class="exchange-book-card">
+              <div class="exchange-book-card suggested-book">
                 <img src="assets/img/book9.jpg" class="exchange-card-img-top img-fluid" alt="...">
                 <div class="exchange-book-card-body">
                   <h5 class="card-title">Newton and Me</h5>
@@ -723,7 +723,7 @@
               </div><!-- End Card with an image on top 2 -->
             </div>
             <div class="col-md-2 p-1">
-              <div class="exchange-book-card">
+              <div class="exchange-book-card suggested-book">
                 <img src="assets/img/book10.jpg" class="exchange-card-img-top img-fluid" alt="...">
                 <div class="exchange-book-card-body">
                   <h5 class="card-title">Sedimentary Rocks</h5>
@@ -731,7 +731,7 @@
               </div><!-- End Card with an image on top 3 -->
             </div>
             <div class="col-md-2 p-1">
-              <div class="exchange-book-card">
+              <div class="exchange-book-card suggested-book">
                 <img src="assets/img/book11.jpg" class="exchange-card-img-top img-fluid" alt="...">
                 <div class="exchange-book-card-body">
                   <h5 class="card-title">Animal Homes</h5>
@@ -739,7 +739,7 @@
               </div><!-- End Card with an image on top 4 -->
             </div>
             <div class="col-md-2 p-1">
-              <div class="exchange-book-card">
+              <div class="exchange-book-card suggested-book">
                 <img src="assets/img/book12.jpg" class="exchange-card-img-top img-fluid" alt="...">
                 <div class="exchange-book-card-body">
                   <h5 class="card-title">Fibonacci Zoo</h5>
@@ -747,7 +747,7 @@
               </div><!-- End Card with an image on top 5 -->
             </div>
             <div class="col-md-2 p-1">
-              <div class="exchange-book-card">
+              <div class="exchange-book-card suggested-book">
                 <img src="assets/img/book13.jpg" class="exchange-card-img-top img-fluid" alt="...">
                 <div class="exchange-book-card-body">
                   <h5 class="card-title">The Great Divide</h5>
@@ -765,7 +765,28 @@
     </div>
   </div>
 </div><!-- End Extra Large Modal-->
+<style>
+  .exchange-book-card.suggested-book.active {
+    box-shadow: 0px 0px 1px 4px #486edd;
+}
+</style>
+<script type="text/javascript">
+  var suggestedBook = document.querySelectorAll(".suggested-book");
+  suggestedBook.forEach(book => { 
+      book.addEventListener("click", () => { 
+        suggestedBook.forEach((element) => {
+          element.classList.remove('active');
+        });
+        // book.style.opacity = 1;
+          book.classList.add("active");
+          //book.classList.contains('selected').css({'opacity':0.6});
+         console.log(book);
+    });
+});
 
+
+
+</script>
 
 <!-- Footer -->
 <footer id="footer" class="footer">
@@ -809,7 +830,7 @@
       </div>
       <div class="col-lg-9">
         <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms_of_use.html">Terms of Use</a>
+        <a href="/terms-of-use.html">Terms of Use</a>
         <a href="#">Legal</a>
         <a href="#">Sales and Refunds</a>
       </div>
