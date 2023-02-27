@@ -187,6 +187,7 @@ $carousel-caption-spacer: 15rem;
 
     img {
         width: 100%;
+        height: -webkit-fill-available;
     }
   }
 .carousel-item{
@@ -195,8 +196,12 @@ $carousel-caption-spacer: 15rem;
 .carousel-caption {
     right: 0;
     left: 0;
-    background-color: rgba($black, 0.75);
+    // background-color: rgba($black, 0.75);
+    color:$black;
     padding: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    top: 12%;
    
     @media (max-width: 1199px) {
         p{
@@ -205,6 +210,15 @@ $carousel-caption-spacer: 15rem;
         h5{
             font-size: 14px;
         }
+    }
+    .long-quote {
+        font-size: 1.2rem;
+    }
+    a#riddle-answer{
+        font-size: 1.25rem;
+        font-family: "Poppins", sans-serif;
+        color:#486EDD;
+        text-decoration: underline;
     }
     
   }
