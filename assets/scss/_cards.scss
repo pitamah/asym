@@ -176,7 +176,7 @@ $carousel-caption-spacer: 15rem;
     }
   }
 
-  .carousel-indicators {
+  .carousel-indicators button{
     margin-bottom: 0;    
   }
 
@@ -194,13 +194,11 @@ $carousel-caption-spacer: 15rem;
     height:100%;
 }
 .carousel-caption {
-    right: 0;
-    left: 0;
+    right: 15%;
+    left: 15%;
     // background-color: rgba($black, 0.75);
     color:$black;
     padding: 10px;
-    margin-left: 15%;
-    margin-right: 15%;
     top: 12%;
    
     @media (max-width: 1199px) {
@@ -219,7 +217,28 @@ $carousel-caption-spacer: 15rem;
         font-family: "Poppins", sans-serif;
         color:#486EDD;
         text-decoration: underline;
+        cursor: pointer;
     }
-    
+    .countdown-text{
+        font-size: 1.25rem;
+    }
+    a#voting{
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+        color:#486EDD;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+   
   }
+  .book-voting .carousel-caption{
+    right: 10%;
+    left: 10%;
+    color: #343a40;
+    padding: 0 10px;
+    top: 0;
+  }
+  h4#riddle-answer-modal{
+    color:#486EDD !important;
+    }
   

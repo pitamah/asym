@@ -14646,6 +14646,42 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border-color: var(--bs-btn-active-border-color);
 }
 
+/* Loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #333;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.admin-book-summary .btn-primary {
+  padding: 10px 20px;
+}
+
 /*-------------------- Flipbook styles-----------------------*/
 .btnArrow {
   font-size: 30px;
@@ -14990,7 +15026,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   background: #e0f8e9;
 }
 
-.carousel-indicators {
+.carousel-indicators button {
   margin-bottom: 0;
 }
 
@@ -15009,12 +15045,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .carousel-caption {
-  right: 0;
-  left: 0;
+  right: 15%;
+  left: 15%;
   color: #343a40;
   padding: 10px;
-  margin-left: 15%;
-  margin-right: 15%;
   top: 12%;
 }
 @media (max-width: 1199px) {
@@ -15033,6 +15067,29 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Poppins", sans-serif;
   color: #486EDD;
   text-decoration: underline;
+  cursor: pointer;
+}
+.carousel-caption .countdown-text {
+  font-size: 1.25rem;
+}
+.carousel-caption a#voting {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #486EDD;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.book-voting .carousel-caption {
+  right: 10%;
+  left: 10%;
+  color: #343a40;
+  padding: 0 10px;
+  top: 0;
+}
+
+h4#riddle-answer-modal, #riddle-answer-modal.h4 {
+  color: #486EDD !important;
 }
 
 /*--------------------------------------------------------------
