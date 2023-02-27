@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Book</title>
+  <!-- <link rel="stylesheet" href="./style1.css"> -->
+  <link rel="stylesheet" href="assets/flipbook/flipbook.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script><!-- <script defer src="./main.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+  <style media="screen">
+  body{
+    overflow: hidden;
+  }
+    .book {
+      width: 50%;
+      height: 100%
+    }
+
+    #prev-btn {
+      z-index: 50
+    }
+
+    .buttonDiv {
+      position: absolute;
+      bottom: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      transition: transform 0.5s;
+    }
+
+    .cover-img {
+      width: 100%;
+      height: 100vh;
+      border-radius: 0;
+      object-fit: fill;
+    }
+
+    #b1 {
+      padding: 0
+    }
+    .front,
+    .back {
+        transition: transform 0.8s;
+              display: inline-block;
+              transform-style: preserve-3d;
+
+    }
+    .front {
+      border-left: 0;
+
+    }
+.front::before{
+  box-shadow: 5px 5px 5px 5px #000
+}
+    .btnArrow {
+      font-size: 42px;
+      color: #C0EDA6
+    }
+
+    .btnSound {
+      font-size: 42px;
+      color: #C0EDA6
+    }
+
+    .playBtn {
+      font-size: 56px
+    }
+
+    .btnBookmark {
+      font-size: 36px;
+      color: #FF8080
+    }
+
+    .btnHome {
+      font-size: 36px;
+      color: #FF8080
+    }
+
+    .btn {
+      padding: 2px 5px;
+      border:0;
+      box-shadow: none !important
+    }
+
+    .closeBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 15px;
+      border-radius: 50%;
+      font-size: 32px;
+    }
+
+    .pageNoDiv {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 0.2rem;
+      background: black;
+      color: white;
+      opacity: 70%;
+    }
+
+
+    .flipped .front, .flipped .back {
+       transform: rotateY(-180deg);
+        box-shadow: inset 3px 0px 20px rgba(0, 0, 0, 0.2), 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="button"] {
+      display: block;
+      border: none;
+      outline: none;
+    }
+
+    .x-btn:focus,
+    .button:focus,
+    [type="submit"]:focus {
+      outline: none;
+    }
+
+    * {
+      outline: none;
+    }
+    button:hover, button:focus {
+  outline: none;
+  box-shadow: none;
+}
+.modalBtn{
+  border-radius: 25px;
+  line-height: 42px;
+}
+
+.emoji_size{
+    width:8rem;
+    height: 8rem;
+    cursor: pointer;
+}
+#staticBackdrop {
+top: 20px;
+left: 20px;
+right: 20px;
+width: auto;
+margin: 0;
+}
+
+.btnArrow {
+  font-size: 30px;
+  color: white;
+  background-color: #6c757d;
+  width:60px;
+}
+.btnArrow:hover{
+  color: white;
+  background-color: #57379A;
+}
+#prev-btn{
+  margin-left:10px;
+  margin-right:5px;
+}
+#next-btn{
+  margin-right: 20px;
+}
+
+.btnHome {
+  font-size: 30px;
+  color: #6c757d;
+  margin-right:10px;
+}
+.btnHome:hover{
+    color: #57379A;
+  }
+.book{
+  transform: translateX(0%);
+    bottom: 46px;
+}
+.buttonDiv{
+  background: #d7d7d7;
+    color: #fffdfd;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+    padding: 0;
+    height: 46px;
+}
+
+.btn-primary { 
+    background-color: #57379A;
+    border: none;
+    color:white;
+}
+.btn-primary:hover{
+  background-color: #422a74;
+}
+.btn-secondary{
+  background-color: #486EDD;
+  color: white;
+}
+.btn-secondary:hover{
+  background-color: #0b5ed7;
+}
+  </style>
+</head>
+
+<body>
+
+
+  <div id="book" class="book" style="transform: translateX(0%);bottom: 46px;">
+    <div id="p1" class="paper " style="z-index: 12">
+      <div class="front">
+        <div id="f1" class="front-content">
+          <!-- <p>Front & Page No. 1</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b1" class="back-content">
+          <!-- <p>Back & Page No. 1</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem2.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p2" class="paper " style="z-index: 11">
+      <div class="front">
+        <div id="f2" class="front-content">
+          <!-- <p>Front & Page No. 2</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem3.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b2" class="back-content">
+          <!-- <p>Back & Page No. 2</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem4.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p3" class="paper " style="z-index: 10">
+      <div class="front">
+        <div id="f3" class="front-content">
+          <!-- <p>Front & Page No. 3</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem5.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b3" class="back-content">
+          <!-- <p>Back & Page No. 3</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem6.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p4" class="paper " style="z-index: 9">
+      <div class="front">
+        <div id="f4" class="front-content">
+          <!-- <p>Front & Page No. 4</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem7.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b4" class="back-content">
+          <!-- <p>Back & Page No. 4</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem8.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p5" class="paper " style="z-index: 8">
+      <div class="front">
+        <div id="f5" class="front-content">
+          <!-- <p>Front & Page No. 5</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem9.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b5" class="back-content">
+          <!-- <p>Back & Page No. 5</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem10.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p6" class="paper " style="z-index: 7">
+      <div class="front">
+        <div id="f6" class="front-content">
+          <!-- <p>Front & Page No. 6</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem11.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b6" class="back-content">
+          <!-- <p>Back & Page No. 6</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem12.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p7" class="paper " style="z-index: 6">
+      <div class="front">
+        <div id="f7" class="front-content">
+          <!-- <p>Front & Page No. 7</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem13.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b7" class="back-content">
+          <!-- <p>Back & Page No. 7</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem14.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p8" class="paper " style="z-index: 5">
+      <div class="front">
+        <div id="f8" class="front-content">
+          <!-- <p>Front & Page No. 8</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem15.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b8" class="back-content">
+          <!-- <p>Back & Page No. 8</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem16.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p9" class="paper " style="z-index: 4">
+      <div class="front">
+        <div id="f9" class="front-content">
+          <!-- <p>Front & Page No. 9</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem17.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b9" class="back-content">
+          <!-- <p>Back & Page No. 9</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem18.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p10" class="paper " style="z-index: 3">
+      <div class="front">
+        <div id="f10" class="front-content">
+          <!-- <p>Front & Page No. 10</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem19.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b10" class="back-content">
+          <!-- <p>Back & Page No. 10</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem20.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p11" class="paper " style="z-index: 2">
+      <div class="front">
+        <div id="f11" class="front-content">
+          <!-- <p>Front & Page No. 11</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem21.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b11" class="back-content">
+          <!-- <p>Back & Page No. 11</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem22.jpeg">
+        </div>
+      </div>
+    </div>
+    <div id="p12" class="paper " style="z-index: 1">
+      <div class="front">
+        <div id="f12" class="front-content">
+          <!-- <p>Front & Page No. 12</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem23.jpeg">
+        </div>
+      </div>
+      <div class="back">
+        <div id="b12" class="back-content">
+          <!-- <p>Back & Page No. 12</p> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p> -->
+          <img class="cover-img"
+            src="https://asymmetricaldev.blob.core.windows.net/asy-dev/books/thenervoussystem/thenervoussystem24.jpeg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" buttonDiv container-fluid">
+
+
+  <button  class="btn btnHome" onclick="goFirst()" data-bs-toggle="tooltip" data-bs-placement="top" title="First Page">
+      <i class="fa fa-home"></i>
+    </button>
+
+
+    <button id="prev-btn"  onclick="goPrevious()"  class="btn btnArrow" data-bs-toggle="tooltip" data-bs-placement="top" title="Previews">
+      <i class="fa-solid fa-circle-left"></i>
+    </button>
+
+    <button id="next-btn"  onclick="goNext()" class="btn btnArrow"  data-bs-toggle="tooltip" data-bs-placement="top" title="Next">
+      <i class="fa-solid fa-circle-right"></i>
+    </button>
+
+    <button id="markAsCompleteButton" type="button" class="btn btnHome" title="Mark as Read" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+      <i class="fa-solid fa-book"></i>
+    </button>
+
+    <button id="dictionary" type="button" class="btn btnHome" title="Dictionary" data-bs-toggle="modal" data-bs-target="#dictionaryModal" >
+      <i class="fa-solid fa-spell-check"></i>
+    </button>
+    <button type="button" onclick="toggleSound(this)" class="btn btnHome" data-bs-toggle="tooltip" data-bs-placement="top" title="Sound">
+      <i class="fa-solid fa-volume-up"></i>
+    </button>
+  
+  </div>
+  <a href="/Home"> <button type="button" name="button" class="closeBtn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </a>
+
+  <!-- <div class="pageNoDiv">
+    <span id="f_page">{{$current_open_page * 2}}</span> / {{$numOfPages}}
+</div> -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body">
+          <div class="d-grid gap-2 m-3">
+        <a href="Home" class="btn btn-primary modalBtn">Back to Library</a>
+        <button onclick="markAsRead()" class="btn btn-primary modalBtn" type="button">Mark this book as Read</button>
+        <button class="btn btn-secondary modalBtn" type="button" data-bs-dismiss="modal" aria-label="Close">Continue Reading</button>
+        <!-- @if(!empty($quiz_exists))
+        <a href="../pollbook?book_id={{$book_id}}" class="btn btn-warning modalBtn">Take Quiz</a>
+        @endif -->
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="dictionaryModal" tabindex="-1" aria-labelledby="dictionaryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body">
+          <div class="d-grid gap-2 m-3">
+          <p>Model placeholder for dictionary</p>
+        
+        <!-- @if(!empty($quiz_exists))
+        <a href="../pollbook?book_id={{$book_id}}" class="btn btn-warning modalBtn">Take Quiz</a>
+        @endif -->
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="feedback-modal" tabindex="-1" aria-labelledby="feedback-modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Feedback</h4>
+          <a href="Home"  class="btn-close" ></a>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-md-4 p-3 ratingdiv1">
+              <img src="emoji/sad_emoji.png"  class="emoji_size" rating=1 >
+              </div>
+              <div class="col-md-4 p-3 ratingdiv2">
+              <img src="emoji/natural_emoji.png" class="emoji_size" rating=2 >
+              </div>
+              <div class="col-md-4 p-3 ratingdiv3">
+              <img src="emoji/happy_emoji.png" class="emoji_size" rating=3 >
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class=" modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <p>Switch to landscape view for best reading experience.</p>
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-primary" value="OK" data-bs-dismiss="modal" onclick="lock('landscape')"/>
+          <!-- <button type="button" class="btn btn-primary" value="Landscape" onclick="lock('landscape')" data-bs-dismiss="modal">Understood</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script src="assets/flipbook/flipJs.blade.js" ></script>
+<!-- @include('myflipbook.flipJs') -->
+
+
+<!-- <h1>Rotate to PORTRAIT</h1>
+<input type="button" value="Portrait" onclick="lock('portrait')"/>
+
+<h1>Rotate to LANDSCAPE</h1>
+<input type="button" value="Landscape" onclick="lock('landscape')"/>
+
+<h1>Remove Lock Properties</h1>
+<input type="button" value="Unlock" onclick="unlock()"/> -->
+
+
+
+<script>
+
+
+function lock (orientation) {
+  // (A1) GO INTO FULL SCREEN FIRST
+  let de = document.documentElement;
+  if (de.requestFullscreen) { de.requestFullscreen(); }
+  else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
+  else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
+  else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
+
+  // (A2) THEN LOCK ORIENTATION
+  screen.orientation.lock(orientation);
+
+}
+
+
+
+// (B) UNLOCK SCREEN ORIENTATION
+function unlock () {
+  // (B1) UNLOCK FIRST
+  screen.orientation.unlock();
+
+  // (B2) THEN EXIT FULL SCREEN
+  if (document.exitFullscreen) { document.exitFullscreen(); }
+  else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+  else if (document.mozCancelFullScreen) { document.mozCancelFullScreen(); }
+  else if (document.msExitFullscreen) { document.msExitFullscreen(); }
+}
+
+$( document ).ready(function() {
+if(window.screen.height > window.screen.width )
+{
+$('#staticBackdrop').modal('show');
+
+
+}
+});
+
+
+</script>

@@ -487,3 +487,35 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 }
+
+/*-------------------- Flipbook styles-----------------------*/
+.btnArrow {
+  font-size: 30px;
+  color: #767675;
+  &:hover{
+    color: #422a74;
+  }
+}
+.btnHome {
+  font-size: 30px;
+  color: #767675;
+  &:hover{
+    color: #422a74;
+  }
+}
+.book{
+  transform: translateX(0%);
+    bottom: 46px;
+}
+.buttonDiv{
+  background: #d7d7d7;
+    color: #fffdfd;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+    padding: 0;
+    height: 46px;
+}
+
