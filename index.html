@@ -353,11 +353,12 @@
                   <h5 class="card-title">Curiosity Zone</h5>
                   <div class="align-items-center">
                     <!-- Slides with captions -->
-              <div id="carouselExampleCaptions" class="carousel slide curiosity-zone" data-bs-ride="carousel">
+              <div id="carouselExampleCaptions" class="carousel carousel-dark slide curiosity-zone" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active inspiration-quotes">
@@ -378,6 +379,44 @@
                     <div class="carousel-caption d-md-block">
                       <h4 id="riddle-question"></h4>
                       <a id="riddle-answer" data-bs-toggle="modal" data-bs-target="#RiddleModal">Answer</a>
+                    </div>
+                  </div>
+                  <div class="carousel-item book-voting">
+                    <div class="carousel-caption d-md-block">
+                      <h5>What would you like to read next month ?</h5>
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="col-md-3 p-1">
+                            <div class="exchange-book-card suggested-book">
+                              <img src="assets/img/book8.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                              <div class="exchange-book-card-body">
+                                <h5 class="card-title">Born Survivors</h5>
+                              </div>
+                            </div><!-- End Card with an image on top 1 -->
+                          </div>
+                          <div class="col-md-3 p-1">
+                            <div class="exchange-book-card suggested-book">
+                              <img src="assets/img/book9.jpg" class="exchange-card-img-top img-fluid" alt="...">
+                              <div class="exchange-book-card-body">
+                                <h5 class="card-title">Newton and Me</h5>
+                              </div>
+                            </div><!-- End Card with an image on top 2 -->
+                          </div>
+                          <div class="col-md-6 p-1">
+                            <div class="row">
+                              <div class="col-md-12 mt-4">
+                                <p class="countdown-text"><span>2:43:12</span> hours remaining</p>
+                                <button type="submit" class="btn btn-secondary my-4">Submit Vote</button>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <a id="voting" data-bs-toggle="modal" data-bs-target="#VotingInfoModal">How does voting work ?</a>
+                              </div>
+                            </div><!-- End Card with an image on top 2 -->
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -504,6 +543,7 @@
     </div>
   </div>
 </main><!-- End #main -->
+
 <div class="modal fade" id="RiddleModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered  modal-lg">
     <div class="modal-content">
@@ -513,10 +553,17 @@
       </div>
       <div class="modal-body">
         <div class="row">
-          <div class="col-md-12 m-4">
+          <div class="col-md-12 p-4">
               <h4 id="riddle-question-modal"></h4>
-              <h4 id="riddle-answer-modal"></h4>
+              <h4 id="riddle-answer-modal" class=""></h4>
           </div>
+        </div>
+        <!-- Loader -->
+        <div id="loader" class="d-flex">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <span class="px-4 py-1">Think before the answer pops out...</span>
         </div>
       </div>
     </div>
@@ -525,9 +572,30 @@
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
     <button type="button" class="btn btn-primary">Exchange Book</button>
   </div>
-</div>
-</div>
 </div><!-- End Modal-->
+
+<div class="modal fade" id="VotingInfoModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">How the voting works ?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12 p-4">
+            <p>Lorem ipsum dolor sit amet. In excepturi aliquam qui blanditiis harum non reiciendis laboriosam quo porro reprehenderit? 
+              Quo maiores cupiditate ut magni pariatur sed nihil quae est voluptatem quia.
+            </p>
+            <p>Sed amet laudantium ex accusamus quisquam ut maiores sunt ut recusandae corporis. Sed fuga vero eum perferendis possimus 
+              in doloribus architecto. Ut quia repudiandae ut accusamus possimus qui praesentium perspiciatis qui unde cupiditate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- End Modal-->
+ 
   <!-- Footer -->
 
   <footer id="footer" class="footer">

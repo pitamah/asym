@@ -5,25 +5,31 @@ const txtJoke = document.getElementById('joke-text');
 const txtRiddleQuestion = document.getElementById('riddle-question');
 const txtRiddleQuestionModal = document.getElementById('riddle-question-modal');
 const txtRiddleAnswerModal = document.getElementById('riddle-answer-modal');
+
+const btnAnswer= document.getElementById('riddle-answer');
+const modal = document.getElementById('RiddleModal');
+const loader = document.getElementById('loader');
+
 let arrInspiQuotes = [];
 let arrJokes = [];
 let arrRiddles = [];
 
-// Loading spinner shown
-function loading() {
-    loader.hidden = false;
-    quoteContainer.hidden = true;
+function loadingStart() {
+    loader.classList.remove('d-none');
+    txtRiddleAnswerModal.classList.add('d-none');
 }
 
-// Loading spinner hidden
-function complete() {
+function loadingComplete() {
     if(!loader.hidden) {
-        quoteContainer.hidden = false;
-        loader.hidden = true;
+      loader.classList.add('d-none');
+      txtRiddleAnswerModal.classList.remove('d-none');
     }
 }
+modal.addEventListener('show.bs.modal', function(){
+    loadingStart();
+    setTimeout(function(){ loadingComplete(); }, 10000);
+});
 
-// Get Quote from API
 async function getInspiQuote () {
     const jsonUrl = '/data/quotes.json';
     try {
