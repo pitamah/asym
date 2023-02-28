@@ -185,6 +185,9 @@ $carousel-caption-spacer: 15rem;
     border-bottom-left-radius: $br-s;
     border-bottom-right-radius: $br-s;    
 
+    @media (max-width:575.98px) {
+        height:465px;
+    }
     img {
         width: 100%;
         height: -webkit-fill-available;
@@ -201,14 +204,6 @@ $carousel-caption-spacer: 15rem;
     padding: 10px;
     top: 12%;
    
-    @media (max-width: 1199px) {
-        p{
-            font-size: 12px;
-        }
-        h5{
-            font-size: 14px;
-        }
-    }
     .long-quote {
         font-size: 1.2rem;
     }
@@ -227,8 +222,63 @@ $carousel-caption-spacer: 15rem;
         font-family: "Poppins", sans-serif;
         color:#486EDD;
         text-decoration: underline;
+        
         cursor: pointer;
     }
+    @media (max-width: 1399.98px) { 
+        h5{
+            font-size: 18px;
+        }
+        p.countdown-text {
+            margin-top:1rem !important;
+            font-size: 1.05rem ;
+        }
+     }
+    @media (max-width: 1199px) {
+        p{
+            font-size: 12px;
+        }
+        h5{
+            font-size: 14px;
+        }
+        .long-quote {
+            font-size: 1rem;
+        }
+        h4{
+            font-size: 1.2rem;
+        }
+        p.countdown-text{
+            margin-top:1rem !important;
+            font-size: 1.05rem;
+        }
+        a#voting {
+            font-size: 0.8rem;
+        }
+    }
+    @media (max-width: 768px) {
+        .long-quote {
+            font-size: 0.9rem ;
+        }
+        h4{
+            font-size: 1.2rem;
+        }
+        p.countdown-text{
+            margin-top: 0.5rem !important;
+            font-size: 0.9rem;
+        }
+        a#voting {
+            font-size: 0.7rem;
+        }
+        .btn-vote{
+            font-size: 0.8rem;
+        }
+    }
+    @media (max-width:575.98px) {
+        .btn-vote{
+            margin: 10px 0 !important;
+        }
+    }
+    
    
   }
   .book-voting .carousel-caption{
@@ -237,6 +287,59 @@ $carousel-caption-spacer: 15rem;
     color: #343a40;
     padding: 0 10px;
     top: 0;
+    .exchange-book-card { 
+        padding: 0px;
+        margin: 0;
+        border-radius: $br-s;
+        border: 1px solid $white;
+        background-color: white;
+        box-shadow: 0px 2px 20px rgba($secondary, 0.30);
+        height: fit-content;
+    
+        &:active {
+            box-shadow: 0px 0px 1px 4px rgba($secondary, 1);
+        }
+    
+        @media (max-width: 1199px) {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }   
+        @media (max-width:576.98px) {
+            display: inline-block;
+        }
+        @media (max-width: 768px) {
+            height:160px;
+        }
+        @media (max-width:575.98px) {
+            height: fit-content;
+        }
+    }
+    
+    .exchange-book-card-body {
+        padding: 10px 10px 0 10px;
+        .card-title {
+            font-size: 14px;
+            padding:0;
+        }
+        @media (max-width: 768px) {
+            padding: 5px 5px 0 5px;
+            .card-title {
+                font-size: 10px;
+                padding:0;
+            }
+        }
+    }
+    
+    .exchange-card-img-top {
+        border-top-left-radius: $br-xs;
+        border-top-right-radius: $br-xs;
+        @media (max-width: 1199px) {
+            height:100px;
+        }
+        @media (max-width:575.98px) {
+            height:80px;
+        }
+    }
   }
   h4#riddle-answer-modal{
     color:#486EDD !important;
