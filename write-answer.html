@@ -268,7 +268,35 @@
     <div class="innerWrapper">
       <div class="col-lg-12 write-answer">
         <div class="row"> <!--Selected question to answer-->
-          <div class="col-md-12 ">
+          <div class="col-md-12">
+              <!--  Card -->
+              <div class="col-lg-12 col-md-12 ">
+                <div class="card">
+                  <div class="row m-4">          
+                    <div class="d-flex flex-row justify-content-between mt-2">
+                      <a href="#" class="btn btn-primary me-4"><i class="bi bi-arrow-left-circle"></i> Back to result</a>
+                      <a href="#" class="btn btn-outline-secondary">Filter <i class="bi bi-funnel-fill"></i></a>
+                    </div>
+                    <div class="d-flex flex-row row-sm-column mt-2">
+                      <div class="d-flex flex-row ">
+                        <h5 class="mt-2 me-2">Subject:</h5>
+                        <a href="#" class="select-tag align-self-center me-2">
+                          <span>Geography</span>
+                          <i class="bi bi-x-circle"></i>
+                        </a>
+                      </div>
+                      <div class="d-flex flex-row me-4">
+                        <h5 class="mt-2 me-2">Topic:</h5>
+                        <a href="#" class="select-tag align-self-center me-2 active">
+                          <span>Earth's Atmosphere</span>
+                          <i class="bi bi-x-circle"></i>
+                        </a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div><!-- End Card -->
               <!--  Card -->
               <div class="col-lg-12 col-md-12 ">
                 <div class="card">
@@ -283,7 +311,7 @@
                         </p>
                       </div>
                       <div class="answered d-flex flex-row align-self-start">
-                        <i class="bi bi-check me-1"></i><span class="answered-text me-1"> Answered (4)</span>
+                        <i class="bi bi-check me-1"></i><span class="answered-text me-1"> Answered</span><span> (4)</span>
                       </div>
                     </div>
                   </div>
@@ -328,7 +356,7 @@
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <button type="submit" class="btn btn-primary-big mt-4">Post Question</button>
+                      <button type="submit" class="btn btn-primary-big mt-4">Post Answer</button>
                     </div>
                   </form><!-- End Multi Columns Form -->
                 </div>
@@ -386,7 +414,7 @@
             <h5 class="text-search mb-4">Previously answered (4)</h5>
           </div>
           <div class="row">
-            <div class="col-xl-9 col-lg-8 col-md-8">
+            <div class="col-xl-12 col-lg-12 col-md-12">
               <div class="row">
                 <div class="col-md-12 ">
                     <!--  Card -->
@@ -398,8 +426,8 @@
                             <div class="flex-column flex-grow-1">
                               <h5 class="font-weight-bold ms-2">@ameya38</h5>
                               <p class="row-md-column d-flex flex-md-row">
-                                <span class="ms-2 me-2">Subject: Geography</span>
-                                <span class="ms-2 me-2">Posted: 10 mins ago</span>
+                                <span class="ms-2 me-2">600 people helped </span>
+                                <span class="ms-2 me-2">23 questions answered</span>
                               </p>
                             </div>
                             <div class="verified d-flex flex-row align-self-start">
@@ -409,68 +437,68 @@
                         </div>
                         <div class="row m-4 mt-0">
                           <p class="d-flex flex-row">
-                            <strong>Biosphere importance</strong>
-                            <p>
+                            <strong>Biosphere:</strong>
+                          </p>
+                          <p class="d-flex flex-row">
+                              Lorem ipsum dolor sit amet. Est voluptatem magni vel odio voluptates qui impedit alias eum similique numquam et nostrum natus est architecto aliquid ea deserunt consequatur? 
+                              Aut dolor soluta nam laudantium nihil et voluptate provident vel aspernatur earum qui sunt ipsa 33 suscipit consequatur.<br>
+                              1. Eum sunt quasi quo fugiat consequatur ea quaerat amet sit quas tenetur? <br>
+                              2. At expedita mollitia qui officia eius. <br>
+                              3. Vel pariatur perspiciatis a recusandae sequi ad fugit autem. <br><br>
                               Lorem ipsum dolor sit amet. Est voluptatem magni vel odio voluptates qui impedit alias eum similique numquam et nostrum natus est architecto aliquid ea deserunt consequatur? 
                               Aut dolor soluta nam laudantium nihil et voluptate provident vel aspernatur earum qui sunt ipsa 33 suscipit consequatur.
-                            </p>
                           </p>
                         </div>
                         <div class="row m-4 mt-0">
                           <div class="book-card-links row-md-column d-flex flex-row justify-content-end">                  
-                            <div class="row-md-column d-flex flex-md-row">
+                            <div class="row-sm-column d-flex flex-md-row">
                               <div class="">
                                 <span class="me-2">Found this useful ?</span>
                                 <a href="#" class="btn btn-outline-secondary active me-2"><i class="bi bi-hand-thumbs-up"></i></a>
                                 <a href="#" class="btn btn-outline-secondary me-4"><i class="bi bi-hand-thumbs-down"></i></a>
                               </div>
-                              <a href="#" class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="drpSaveMenu" data-bs-toggle="dropdown" aria-expanded="false">
-                                Save <i class="bi bi-bookmark-fill"></i>
-                              </a>
+                              <div class="btn-group">
+                                <a href="#" class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="drpSaveMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Save <i class="bi bi-bookmark-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu p-4" aria-labelledby="drpSaveMenu2">
+                                  <li class="d-flex flex-column justify-content-left mb-2">
+                                    <h6 class="dropdown-header">Save to subject:</h6>
+                                    <select id="drpSubject" class="drpSubject">
+                                      <option selected>Geography</option>
+                                      <option>Biology</option>
+                                    </select>
+                                  </li>
+                                  <li><hr class="dropdown-divider mb-2"></li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Unit Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Term Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Final Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex justify-content-center mb-2">
+                                    <a href="#" class="btn btn-outline-secondary" href="#" role="button" id="btnCreateNewNote">
+                                      <i class="bi bi-plus"></i> Create New Note
+                                    </a>
+                                  </li>
+                                  <li class="d-flex justify-content-center mb-2">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                  </li>
+                                </ul> <!-- End drop save menu --> 
+                              </div>
                               <a href="#" class="btn btn-outline-secondary">Report <i class="bi bi-flag-fill"></i></a>
-                              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow btnsave-dropmenu" aria-labelledby="drpSaveMenu">
-                                <li class="dropdown-header">
-                                  <span>Save to:</span>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                  <span class="dropdown-item">Subject</span>
-                                  <select id="drpSubject" class="dropdown-item form-select">
-                                    <option selected>Geography</option>
-                                    <option>Biology</option>
-                                  </select>
-                                </li>
-                                <li>
-                                  <hr class="dropdown-divider">
-                                </li>
-                                <li>
-                                  <input type="checkbox" class="form-control dropdown-item" id="chkUnitTest">
-                                  <label class="form-check-label dropdown-item" for="chkUnitTest">
-                                    Unit Test
-                                  </label>
-                                </li>
-                                <li>
-                                  <input type="checkbox" class="form-control dropdown-item" id="chkTermExam">
-                                  <label class="form-check-label dropdown-item" for="chkTermExam">
-                                    Term Exam
-                                  </label>
-                                </li>
-                                <li>
-                                  <input type="checkbox" class="form-control dropdown-item" id="chkFinalExam">
-                                  <label class="form-check-label dropdown-item" for="chkFinalExam">
-                                    Final Exam
-                                  </label>
-                                </li>
-                                <li>
-                                  <button type="submit" class="btn btn-outline-secondary"><i class="bi bi-plus"></i> Create New Note</button>
-                                </li>
-                                <li>
-                                  <button type="submit" class="btn btn-primary">Save</button>
-                                </li>
-                    
-                              </ul><!-- End Profile Dropdown Items -->
                             </div>
                           </div>
                         </div>
@@ -486,8 +514,8 @@
                             <div class="flex-column flex-grow-1">
                               <h5 class="font-weight-bold ms-2">@ameya38</h5>
                               <p class="row-md-column d-flex flex-md-row">
-                                <span class="ms-2 me-2">Subject: Biology</span>
-                                <span class="ms-2 me-2">Posted: 13/10/2022</span>
+                                <span class="ms-2 me-2">600 people helped </span>
+                                <span class="ms-2 me-2">23 questions answered</span>
                               </p>
                             </div>
                             <div class="verified d-flex flex-row align-self-start">
@@ -497,22 +525,153 @@
                         </div>
                         <div class="row m-4 mt-0">
                           <p class="d-flex flex-row">
-                            <strong>Hydrological Cycle</strong>
+                            <strong>Biosphere importance</strong>
                           </p>
                           <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                              Lorem ipsum dolor sit amet. Aut officia quos a veritatis voluptatum sed tempora libero et harum necessitatibus et atque numquam. 
+                              Et nisi Quis et nostrum voluptatem sit dolores veniam nam facilis repudiandae est saepe maxime eum sint dolore. 
+                              Et praesentium facere ut esse iusto ex quis recusandae ea pariatur saepe sit rerum corrupti ea ipsam laborum. 
+                              Eos quisquam eius aut placeat alias et distinctio dolores non quia molestiae a ratione repudiandae!
                           </p>
                         </div>
                         <div class="row m-4 mt-0">
                           <div class="book-card-links row-md-column d-flex flex-row justify-content-end">                  
-                            <div class="row-md-column d-flex flex-md-row float-end">
+                            <div class="row-sm-column d-flex flex-md-row">
                               <div class="">
                                 <span class="me-2">Found this useful ?</span>
-                                <a href="#" class="btn btn-outline-secondary me-2"><i class="bi bi-hand-thumbs-up"></i></a>
+                                <a href="#" class="btn btn-outline-secondary active me-2"><i class="bi bi-hand-thumbs-up"></i></a>
                                 <a href="#" class="btn btn-outline-secondary me-4"><i class="bi bi-hand-thumbs-down"></i></a>
                               </div>
-                              <a href="#" class="btn btn-outline-secondary">Save <i class="bi bi-bookmark-fill"></i></a>
+                              <div class="btn-group">
+                                <a href="#" class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="drpSaveMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Save <i class="bi bi-bookmark-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu p-4" aria-labelledby="drpSaveMenu2">
+                                  <li class="d-flex flex-column justify-content-left mb-2">
+                                    <h6 class="dropdown-header">Save to subject:</h6>
+                                    <select id="drpSubject" class="drpSubject">
+                                      <option selected>Geography</option>
+                                      <option>Biology</option>
+                                    </select>
+                                  </li>
+                                  <li><hr class="dropdown-divider mb-2"></li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Unit Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Term Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Final Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex justify-content-center mb-2">
+                                    <a href="#" class="btn btn-outline-secondary" href="#" role="button" id="btnCreateNewNote">
+                                      <i class="bi bi-plus"></i> Create New Note
+                                    </a>
+                                  </li>
+                                  <li class="d-flex justify-content-center mb-2">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                  </li>
+                                </ul> <!-- End drop save menu --> 
+                              </div>
+                              <a href="#" class="btn btn-outline-secondary">Report <i class="bi bi-flag-fill"></i></a>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div><!-- End Card -->
+
+                    <!--  Card -->
+                    <div class="col-lg-12 col-md-12 ">
+                      <div class="card">
+                        <div class="row m-4"> 
+                          <div class="d-flex flex-row">
+                            <img src="assets/img/profile-img.jpg" alt="" class="person-image rounded-circle">
+                            <div class="flex-column flex-grow-1">
+                              <h5 class="font-weight-bold ms-2">@ameya38</h5>
+                              <p class="row-md-column d-flex flex-md-row">
+                                <span class="ms-2 me-2">600 people helped </span>
+                                <span class="ms-2 me-2">23 questions answered</span>
+                              </p>
+                            </div>
+                            <div class="verified d-flex flex-row align-self-start">
+                              <i class="bi bi-patch-check-fill me-1"></i><span class="verified-text me-1"> Verified Answer</span><span> +4</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row m-4 mt-0">
+                          <p class="d-flex flex-row">
+                            <strong>Biosphere:</strong>
+                          </p>
+                          <p class="d-flex flex-row">
+                              Lorem ipsum dolor sit amet. Est voluptatem magni vel odio voluptates qui impedit alias eum similique numquam et nostrum natus est architecto aliquid ea deserunt consequatur? 
+                              Aut dolor soluta nam laudantium nihil et voluptate provident vel aspernatur earum qui sunt ipsa 33 suscipit consequatur.<br>
+                              1. Eum sunt quasi quo fugiat consequatur ea quaerat amet sit quas tenetur? <br>
+                              2. At expedita mollitia qui officia eius. <br>
+                              3. Vel pariatur perspiciatis a recusandae sequi ad fugit autem. <br><br>
+                              Lorem ipsum dolor sit amet. Est voluptatem magni vel odio voluptates qui impedit alias eum similique numquam et nostrum natus est architecto aliquid ea deserunt consequatur? 
+                              Aut dolor soluta nam laudantium nihil et voluptate provident vel aspernatur earum qui sunt ipsa 33 suscipit consequatur.
+                          </p>
+                        </div>
+                        <div class="row m-4 mt-0">
+                          <div class="book-card-links row-md-column d-flex flex-row justify-content-end">                  
+                            <div class="row-sm-column d-flex flex-md-row">
+                              <div class="">
+                                <span class="me-2">Found this useful ?</span>
+                                <a href="#" class="btn btn-outline-secondary active me-2"><i class="bi bi-hand-thumbs-up"></i></a>
+                                <a href="#" class="btn btn-outline-secondary me-4"><i class="bi bi-hand-thumbs-down"></i></a>
+                              </div>
+                              <div class="btn-group">
+                                <a href="#" class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="drpSaveMenu3" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Save <i class="bi bi-bookmark-fill"></i>
+                                </a>
+                                <ul class="dropdown-menu p-4" aria-labelledby="drpSaveMenu3">
+                                  <li class="d-flex flex-column justify-content-left mb-2">
+                                    <h6 class="dropdown-header">Save to subject:</h6>
+                                    <select id="drpSubject" class="drpSubject">
+                                      <option selected>Geography</option>
+                                      <option>Biology</option>
+                                    </select>
+                                  </li>
+                                  <li><hr class="dropdown-divider mb-2"></li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Unit Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Term Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex align-items-center mb-2">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                      Final Test
+                                    </label>
+                                  </li>
+                                  <li class="d-flex justify-content-center mb-2">
+                                    <a href="#" class="btn btn-outline-secondary" href="#" role="button" id="btnCreateNewNote">
+                                      <i class="bi bi-plus"></i> Create New Note
+                                    </a>
+                                  </li>
+                                  <li class="d-flex justify-content-center mb-2">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                  </li>
+                                </ul> <!-- End drop save menu --> 
+                              </div>
                               <a href="#" class="btn btn-outline-secondary">Report <i class="bi bi-flag-fill"></i></a>
                             </div>
                           </div>
@@ -520,32 +679,6 @@
                       </div>
                     </div><!-- End Card -->
                 </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-4">
-              <div class="card p-4">
-                <h4>Geography</h4>
-                <h6 class="mb-4">Top Students</h6>
-                  <div class="d-flex align-items-center pe-0 mb-4">
-                    <img src="assets/img/profile-img.jpg" alt="Profile" class="top-person-image rounded-circle">
-                    <h5 class="font-weight-bold d-none d-md-block ps-2">Leanne Elliott #1</h5>
-                  </div>
-                  <div class="d-flex align-items-center pe-0 mb-4">
-                    <img src="assets/img/profile-img.jpg" alt="Profile" class="top-person-image rounded-circle">
-                    <h5 class="font-weight-bold d-none d-md-block ps-2">Clinton Mckenzie #2</h5>
-                  </div>
-                  <div class="d-flex align-items-center pe-0 mb-4">
-                    <img src="assets/img/profile-img.jpg" alt="Profile" class="top-person-image rounded-circle">
-                    <h5 class="font-weight-bold d-none d-md-block ps-2">Vilma Rivas #3</h5>
-                  </div>
-                  <div class="d-flex align-items-center pe-0 mb-4">
-                    <img src="assets/img/profile-img.jpg" alt="Profile" class="top-person-image rounded-circle">
-                    <h5 class="font-weight-bold d-none d-md-block ps-2">Arlie Cruz #4</h5>
-                  </div>
-                  <div class="d-flex align-items-center pe-0 mb-4">
-                    <img src="assets/img/profile-img.jpg" alt="Profile" class="top-person-image rounded-circle">
-                    <h5 class="font-weight-bold d-none d-md-block ps-2">Osvalso Francis #5</h5>
-                  </div>
               </div>
             </div>
           </div>
