@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+
+# custom flex classes - used to aplly column direction for devices
+
+--------------------------------------------------------------*/
+
+.row-lg-column{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+@media (max-width:768px) {
+    .row-md-column{
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+}
+@media (max-width: 575.98px){
+    .row-sm-column{
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    .flex-custom-mb-4{
+        margin-bottom: 1.5rem !important;
+    }
+    .flex-custom-mb-2{
+        margin-bottom: 0.5rem !important;
+    }
+}

@@ -10,9 +10,12 @@ var toolbarOptions = [
     ['clean']                                         // remove formatting button
   ];
   
-  var quill = new Quill('#editor', {
+  var editor = document.getElementById('editor');
+if(editor){
+  var quill = new Quill(editor, {
     modules: {
       toolbar: toolbarOptions
     },
     theme: 'snow'
   });
+}
