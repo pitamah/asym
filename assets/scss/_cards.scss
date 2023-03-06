@@ -104,7 +104,7 @@
         display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical; 
-        width: 250px;
+        // width: 250px;
         overflow: hidden;
     }
 }
@@ -136,9 +136,16 @@
             
         }
     }
-    @media (min-width:1199px) {
-        .mobile-break{
-            display:none;
+    @media screen and (min-width: 1400px) {
+        .mobile-break {
+            display: none;
+        }
+    }
+    /* Landscape */
+    @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) 
+    {
+        .mobile-break {
+            display: none;
         }
     }
 }
@@ -152,11 +159,10 @@
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical; 
-        width: 250px;
+        //width: 250px;
         overflow: hidden;
     }
 }
-
 // PLANNER CARD
 
 // CAROUSEL CARD

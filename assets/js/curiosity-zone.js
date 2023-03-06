@@ -25,10 +25,12 @@ function loadingComplete() {
       txtRiddleAnswerModal.classList.remove('d-none');
     }
 }
-modal.addEventListener('show.bs.modal', function(){
-    loadingStart();
-    setTimeout(function(){ loadingComplete(); }, 10000);
-});
+if(modal){
+    modal.addEventListener('show.bs.modal', function(){
+        loadingStart();
+        setTimeout(function(){ loadingComplete(); }, 10000);
+    });
+}
 
 async function getInspiQuote () {
     const jsonUrl = '/data/quotes.json';
@@ -141,12 +143,22 @@ async function getJokes() {
 }
 
 // On Load
-getInspiQuote();
-getRiddles();
-getJokes();
+if(txtInspiQuote){
+    getInspiQuote();
+}
+if(txtRiddleQuestion){
+    getRiddles();
+}
+if(txtJoke){
+    getJokes();
+}
 
 var myCarousel = document.querySelector('#carouselExampleCaptions')
-var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 5000,
-  wrap:false
-})
+if(myCarousel){
+    var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        wrap:true
+    });
+}
+
+
