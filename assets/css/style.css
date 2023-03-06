@@ -14311,6 +14311,12 @@ h6,
   font-size: 2.5rem;
   color: #198754;
 }
+.write-page .answered {
+  background-color: #d3d3d4;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #343a40;
+}
 .write-page .search-question .card {
   max-height: 210px;
 }
@@ -14523,16 +14529,9 @@ h6,
   border-radius: 0.375rem;
   padding: 4px 10px;
 }
-.write-page .write-answer .card .answered {
-  background-color: #d3d3d4;
-  padding: 5px 10px;
-  border-radius: 10px;
-  color: #343a40;
-}
 .write-page .write-answer .card a.active {
-  color: var(--bs-btn-active-color);
+  color: #fff;
   background-color: #57379A;
-  border-color: var(--bs-btn-active-border-color);
 }
 @media (max-width: 768px) {
   .write-page .write-answer .card .verified-text, .write-page .write-answer .card .answered-text {
@@ -14929,7 +14928,6 @@ h6,
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  width: 250px;
   overflow: hidden;
 }
 
@@ -14950,6 +14948,7 @@ h6,
 
 .book-card-links {
   display: block;
+  /* Landscape */
 }
 .book-card-links a {
   padding: 4px 10px;
@@ -14959,7 +14958,12 @@ h6,
 .book-card-links a:hover {
   color: #8b6ccb;
 }
-@media (min-width: 1199px) {
+@media screen and (min-width: 1400px) {
+  .book-card-links .mobile-break {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .book-card-links .mobile-break {
     display: none;
   }
@@ -14976,7 +14980,6 @@ h6,
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  width: 250px;
   overflow: hidden;
 }
 
