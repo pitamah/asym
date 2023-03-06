@@ -232,14 +232,96 @@ h6 {
   }
 }
 
-.read-it-again {
-  width: 82%;
+.MultiCarousel.read-it-again {
+   width: 82%;
   overflow-x: hidden;
   padding: 15px 30px;
+  @media screen and (max-width:576px){
+    width:100%;
+    padding: 15px 0;
+  }
 }
-
-
-
+.MultiCarousel{
+  .carousel-item{
+    height:auto;
+    background-color: transparent;
+  }
+  .carousel-inner {
+    height:100%;
+    padding: 1em;
+    display: flex;
+  }
+  .card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .card .img-wrapper {
+      max-width: 100%;
+      height: 12em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .card .card-body{
+    max-width: 100%;
+    height: 7em;
+    display: flex;
+    justify-content: center;
+  }
+  .card img {
+      max-height: 100%;
+  }
+  // Large devices (desktops, 992px and up)
+  // @media (min-width: 992px) {
+    .carousel-item {
+      margin-right: 0;
+      flex:0 0 calc(100%/5);
+      display: block;
+    }
+  // }
+  // Medium devices (tablets, less than 992px)
+  @media (max-width: 991.98px) {
+    .card .img-wrapper {
+      height: 12em;
+    }
+    .carousel-item {
+      margin-right: 0;
+      flex:0 0 calc(100%/2);
+    }
+  }
+  // X-Small devices (portrait phones, less than 576px)
+  @media screen and (max-width:576px){
+    .carousel-item.active{
+      display: block;
+     
+    }
+    .card .img-wrapper {
+      height: 15em;
+    }
+    .carousel-item{
+      position: relative;
+      display: none;
+      float: left;
+      width: 100%;
+      margin-right: -100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transition: transform .6s ease-in-out;
+      margin-right:0;
+      flex:0 0 100%;
+    }
+  }
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
