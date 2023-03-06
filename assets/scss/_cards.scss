@@ -148,6 +148,11 @@
             display: none;
         }
     }
+    @media only screen and (width:1024px) and (resolution: 163dpi) {
+        .mobile-break {
+            display: block;
+        }
+    }
 }
 .book-card-links .card-link{
     padding: 4px 10px 4px 0;
