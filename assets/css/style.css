@@ -14205,6 +14205,7 @@ h6,
   -webkit-box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
           box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
+  width: 200px;
 }
 .MultiCarousel .carousel-control-prev,
 .MultiCarousel .carousel-control-next {
@@ -14218,6 +14219,7 @@ h6,
 }
 .MultiCarousel .card .img-wrapper {
   max-width: 100%;
+  width: 200px;
   height: 12em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14231,13 +14233,13 @@ h6,
 }
 .MultiCarousel .card .card-body {
   max-width: 100%;
-  height: 7em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+.MultiCarousel .card-title {
+  padding: 10px 0 10px 0;
+  font-size: 16px;
 }
 .MultiCarousel .card img {
   max-height: 100%;
@@ -14245,9 +14247,14 @@ h6,
 .MultiCarousel .carousel-item {
   margin-right: 0;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 20%;
-          flex: 0 0 20%;
-  display: block;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 @media (max-width: 991.98px) {
   .MultiCarousel .card .img-wrapper {
@@ -14256,8 +14263,8 @@ h6,
   .MultiCarousel .carousel-item {
     margin-right: 0;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
   }
 }
 @media screen and (max-width: 576px) {
@@ -14266,6 +14273,10 @@ h6,
   }
   .MultiCarousel .card .img-wrapper {
     height: 15em;
+    width: auto;
+  }
+  .MultiCarousel .card {
+    width: auto;
   }
   .MultiCarousel .carousel-item {
     position: relative;
@@ -14972,7 +14983,6 @@ h6,
   background-color: white;
   -webkit-box-shadow: 0px 2px 20px rgba(72, 110, 221, 0.3);
           box-shadow: 0px 2px 20px rgba(72, 110, 221, 0.3);
-  height: 100%;
 }
 .exchange-book-card:active {
   -webkit-box-shadow: 0px 0px 1px 4px #486edd;
@@ -15000,6 +15010,67 @@ h6,
 .book-exchange-icon {
   font-size: 50px;
   color: #CCC;
+}
+
+.book-exchange-modal {
+  /* Landscape */
+}
+.book-exchange-modal .card-item {
+  margin-right: 10px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 180px;
+}
+.book-exchange-modal .img-wrapper {
+  max-width: 100%;
+  height: 10em;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.book-exchange-modal .img-wrapper img {
+  width: 100%;
+  height: 10em;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.book-exchange-modal .card-body {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+}
+.book-exchange-modal .card-title {
+  padding: 10px 0 15px 0;
+}
+@media (max-width: 768px) {
+  .book-exchange-modal .exchange-icon {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .book-exchange-modal .img-wrapper, .book-exchange-modal .card-item {
+    width: auto;
+  }
+}
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .book-exchange-modal .img-wrapper, .book-exchange-modal .card-item {
+    width: auto;
+  }
 }
 
 .book-card {
@@ -15066,7 +15137,7 @@ h6,
     display: none;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 1023.98px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
   .book-card-links .mobile-break {
     display: none;
   }
