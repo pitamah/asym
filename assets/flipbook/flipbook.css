@@ -32,11 +32,6 @@ button:hover i {
     color: rgb(102, 102, 102);
 }
 
-i {
-    color: gray;
-    font-size: 4em;
-}
-
 /* Book */
 .book {
     width: 350px;
@@ -102,19 +97,6 @@ i {
     transform: rotateY(-180deg)
 }
 
-/* Paper Z-index */
-#p1 {
-    z-index: 3;
-}
-
-#p2 {
-    z-index: 2;
-}
-
-#p3 {
-    z-index: 1;
-}
-
 /* Customization */
 
 .book-title {
@@ -146,7 +128,7 @@ i {
     margin-bottom: 20px;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
     .book {
         height: 100% !important;
     }
@@ -164,11 +146,11 @@ i {
     .book {
         height: fit-content !important;
     }
-}
+} */
 
 /* Portrait */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     .book {
         height: fit-content !important;
     }
-}
+} */

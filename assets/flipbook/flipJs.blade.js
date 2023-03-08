@@ -2,9 +2,32 @@
 
   // Business Logic
   let current_open_page = 1;
-  let numOfPages = 24;
+  let numOfPages = 10;
   let maxState = numOfPages + 1;
   let sound = true;
+
+  let current_open_page_mob = 1;
+  let numOfPages_mob = 10;
+  let maxState_mob = numOfPages;
+    
+  
+  $(document).ready(function () {
+    if(window.matchMedia("(max-width: 575.98px)").matches){
+      $('#book-Desktop').hide();
+      $('#btnDesktopDiv').hide();
+      
+      $('#book-mobile').show();
+      $('#btnMobileDiv').show();
+    }
+    else if(window.matchMedia("(min-width: 992px)").matches){
+      $('#book-Desktop').show();
+      $('#btnDesktopDiv').show();
+
+      $('#book-mobile').hide();
+      $('#btnMobileDiv').hide();
+    }
+  });
+
 
   function store_next(){
     var xhttp = new XMLHttpRequest();
@@ -33,8 +56,8 @@
 
   function play_flip_sound(){
     if(sound === true){
-  var audio = new Audio('public/mp3/turnPage.mp3');
-  audio.play();
+      var audio = new Audio('assets/flipbook/mp3/turnPage.mp3');
+      audio.play();
     }
   }
 
@@ -61,18 +84,7 @@
   }
 
 
-  function openBook() {
-      document.querySelector('#book').style.transform = "translateX(50%)";
-  }
-
-  function closeBook(isFirstPage) {
-      if(isFirstPage) {
-        document.querySelector('#book').style.transform = "translateX(0%)";
-      } else {
-        document.querySelector('#book').style.transform = "translateX(100%)";
-      }
-  }
-
+  
   function getImage(){
     document.querySelector('#b'+current_open_page+ ' .cover-img').setAttribute('src', 'storage/app/public/book_image/9781612119274-'+(current_open_page*2)+'.jpg')
     if(current_open_page == numOfPages) return false;
@@ -80,6 +92,52 @@
     document.querySelector('#f'+nextState+ ' .cover-img').setAttribute('src', 'storage/app/public/book_image/9781612119274-'+(nextState*2)+'.jpg')
   }
 
+  function goMobileNext() {
+      if(current_open_page_mob < maxState_mob) {
+        selectPage = document.querySelector('#pm'+current_open_page_mob);
+        selectPage.style.zIndex = current_open_page_mob;
+        selectPage.classList.add("flipped");
+        //store_next();
+        play_flip_sound();
+        // markAsComplete(); // show when last page open
+        // getImage();
+        //document.querySelector('#f_page').textContent = current_open_page_mob > 1 ? current_open_page_mob * 2 : current_open_page_mob
+        current_open_page_mob++;
+    } 
+    else if(current_open_page_mob == numOfPages_mob){
+      closeMobileBook(false);
+    }
+  }
+  function goMobilePrevious() {
+    if(current_open_page_mob > 1) {
+      goToPage = current_open_page_mob - 1;
+      selectPage = document.querySelector('#pm'+goToPage);
+      selectPage.style.zIndex = maxState_mob - goToPage;
+      selectPage.classList.remove("flipped");
+      if(current_open_page_mob == 2){
+        closeMobileBook(true);
+      }
+      //store_previous();
+      play_flip_sound();
+      current_open_page_mob--;
+      document.querySelector('#f_page').textContent = current_open_page_mob * 2 - 2
+    }
+}
+function goMobileFirst(){
+  if(current_open_page_mob > 1){
+    goToPage = current_open_page_mob - 1;
+    for(goToPage; goToPage >= 1; goToPage-- ){
+        selectPage = document.querySelector('#pm'+goToPage);
+        selectPage.style.zIndex = maxState_mob - goToPage;
+        selectPage.classList.remove("flipped");
+     }
+     current_open_page_mob = 1
+    //store_next();
+    closeMobileBook(true);
+    play_flip_sound();
+    document.querySelector('#f_page').textContent = current_open_page_mob * 2
+  }
+}
 
   function goNext() {
       if(current_open_page < maxState) {
@@ -87,14 +145,13 @@
         selectPage = document.querySelector('#p'+current_open_page);
         selectPage.style.zIndex = current_open_page;
         selectPage.classList.add("flipped");
-
         if(current_open_page == 1){
-            openBook();
+            openDesktopBook();
         }
         if(current_open_page == numOfPages){
-            closeBook(false);
+            closeDesktopBook(false);
         }
-        store_next();
+        //store_next();
         play_flip_sound();
         // markAsComplete(); // show when last page open
         // getImage();
@@ -110,16 +167,15 @@
         selectPage.style.zIndex = maxState - goToPage;
         selectPage.classList.remove("flipped");
         if(current_open_page == maxState){
-          openBook()
+          openDesktopBook()
         }
         if(current_open_page == 2){
-          closeBook(true);
+          closeDesktopBook(true);
         }
-        store_previous();
+        //store_previous();
         play_flip_sound();
         current_open_page--;
         document.querySelector('#f_page').textContent = current_open_page * 2 - 2
-        // alert(current_open_page);
       }
   }
 
@@ -133,11 +189,36 @@
      }
      current_open_page = 1
     store_next();
-    closeBook(true);
+    closeDesktopBook(true);
     play_flip_sound();
     document.querySelector('#f_page').textContent = current_open_page * 2
   }
 }
+
+function openDesktopBook() {
+  document.querySelector('#book-Desktop').style.transform = "translateX(50%)";
+}
+
+function closeDesktopBook(isFirstPage) {
+  if(isFirstPage) {
+    document.querySelector('#book-Desktop').style.transform = "translateX(0%)";
+  } else {
+    document.querySelector('#book-Desktop').style.transform = "translateX(100%)";
+    $('#txtAlertMessageModal').html("End of the book");
+    $('#AlertMessageModal').modal('show');
+  }
+}
+function closeMobileBook(isFirstPage) {
+  if(isFirstPage) {
+    document.querySelector('#book-mobile').style.transform = "translateX(0%)";
+  } else {
+    document.querySelector('#book-mobile').style.transform = "translateX(-180%)";
+    $('#txtAlertMessageModal').html("End of the book");
+    $('#AlertMessageModal').modal('show');
+
+  }
+}
+
 
 function toggleSound(element){
   if(sound === true) {
@@ -155,7 +236,7 @@ function toggleSound(element){
 
 //<script>
 
-    $(document).on('click', '.emoji_size', function () {
+  $(document).on('click', '.emoji_size', function () {
     rating = $(this).attr('rating');
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "bookreaderfeedback?book_id={{$book_id}}&rating="+rating, true);
