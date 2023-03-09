@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale = 1.0, user-scalable=no">
   <title>Book</title>
   <!-- <link rel="stylesheet" href="./style1.css"> -->
   <link rel="stylesheet" href="assets/flipbook/flipbook.css">
@@ -30,7 +30,7 @@
       overflow: hidden;
     }
 
-    .book {
+    .book{
       width: 50%;
       height: 100%;
       transform: translateX(0%);
@@ -206,7 +206,7 @@
 
     .btn {
       font-size: 20px;
-      padding: 6px 12px;
+      padding: 6px 20px;
       margin-right: 10px;
       border-radius: 50px;
       height: auto;
@@ -229,6 +229,10 @@
     }
     
     @media (max-width: 991.98px){
+      div#container{
+        width: 100%;
+        height:100%;
+      }
       .book {
         width: 100%;
         height: 100%
@@ -239,6 +243,10 @@
     }
 
     @media (min-width: 992px) {
+      div#container{
+        width: 100%;
+        height:100%;
+      }
       .book {
         width: 50%;
         height: 100%
@@ -252,25 +260,61 @@
       }
     }
     @media (max-width: 575.98px) {
+      div#container{
+        width: 100%;
+        height:100%;
+      }
       .book {
         width: 100%;
-        height: 100%
-      }
+        height: 100%;
+       }
       .btnNav {
-        font-size: 20px;
+        font-size: 22px;
         height: 45px;
         padding:10px 10px;
       }
       .buttonDiv {
         height: 50px;
       }
+      .btn {
+        font-size: 15px;
+      }
+      
     }
- 
+    @media only screen 
+      and (min-device-width: 1024px) 
+      and (max-device-width: 1366px)
+      and (-webkit-min-device-pixel-ratio: 2) {
+        div#container{
+          width: 100%;
+          height:100%;
+        }
+        .book {
+          width: 100%;
+          height: 100%;
+        }
+        .btnNav {
+          font-size: 25px;
+          height: 60px;
+          padding:10px 15px;
+        }
+        .buttonDiv {
+          height: 68px;
+        }
+    }
+
+    #mobile-container{
+      all: inherit;
+      height: 100%;
+      width: 100%;
+    }
+    
+    
   </style>
 </head>
 
 <body>
-
+<div id="mobile-container">
   <div id="book-mobile" class="book" style="display: none;">
     <div id="pm1" class="paper " style="z-index: 10">
       <div class="front">
@@ -521,7 +565,6 @@
       </div>
     </div>
   </div>
-
   <div id="btnDesktopDiv" class=" buttonDiv container-fluid" style="display: none;">
     <button class="btnNav btnHome" onclick="goFirst()" data-bs-toggle="tooltip" data-bs-placement="top" title="First Page">
       <i class="fa fa-home"></i>
@@ -548,7 +591,8 @@
     </button>
   </div>
 
-  <a href="/Home"> <button type="button" name="button" class="closeBtn">
+  <a href="/my-library.html" id="btnCloseBook"> 
+    <button type="button" name="button" class="closeBtn">
       <i class="fa-solid fa-xmark"></i>
     </button>
   </a>
@@ -589,7 +633,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+          <button id="btnAlertClose" type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
         </div>
       </div>
     </div>
@@ -640,15 +684,16 @@
       <div class="modal-content">
 
         <div class="modal-body">
-          <p>Switch to landscape view for best reading experience.</p>
+          <p>Best reading experience in Portrait mode</p>
         </div>
         <div class="modal-footer">
-          <input type="button" class="btn btn-primary" value="OK" data-bs-dismiss="modal" onclick="lock('landscape')" />
+          <input id="btnOkPortrait" type="button" class="btn btn-primary" value="OK" data-bs-dismiss="modal"/>
           <!-- <button type="button" class="btn btn-primary" value="Landscape" onclick="lock('landscape')" data-bs-dismiss="modal">Understood</button> -->
         </div>
       </div>
     </div>
   </div>
+</div>
 </body>
 
 </html>
@@ -665,41 +710,3 @@
 
 <h1>Remove Lock Properties</h1>
 <input type="button" value="Unlock" onclick="unlock()"/> -->
-
-
-
-<script>
-
-
-  function lock(orientation) {
-    // (A1) GO INTO FULL SCREEN FIRST
-    let de = document.documentElement;
-    if (de.requestFullscreen) { de.requestFullscreen(); }
-    else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
-    else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
-    else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
-
-    // (A2) THEN LOCK ORIENTATION
-    screen.orientation.lock(orientation);
-
-  }
-  // (B) UNLOCK SCREEN ORIENTATION
-  function unlock() {
-    // (B1) UNLOCK FIRST
-    screen.orientation.unlock();
-
-    // (B2) THEN EXIT FULL SCREEN
-    if (document.exitFullscreen) { document.exitFullscreen(); }
-    else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
-    else if (document.mozCancelFullScreen) { document.mozCancelFullScreen(); }
-    else if (document.msExitFullscreen) { document.msExitFullscreen(); }
-  }
-
-  $(document).ready(function () {
-    if (window.screen.height > window.screen.width) {
-      //$('#staticBackdrop').modal('show');
-    }
-  });
-
-
-</script>

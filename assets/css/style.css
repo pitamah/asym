@@ -15015,6 +15015,10 @@ h6,
 .book-exchange-modal {
   /* Landscape */
 }
+.book-exchange-modal .btn-check:checked + label > .suggested-book {
+  -webkit-box-shadow: 0px 0px 1px 4px #486edd;
+          box-shadow: 0px 0px 1px 4px #486edd;
+}
 .book-exchange-modal .card-item {
   margin-right: 10px;
   -webkit-box-flex: 0;
@@ -15058,13 +15062,37 @@ h6,
 .book-exchange-modal .card-title {
   padding: 10px 0 15px 0;
 }
+.book-exchange-modal label.lbl-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 @media (max-width: 768px) {
   .book-exchange-modal .exchange-icon {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
-  .book-exchange-modal .img-wrapper, .book-exchange-modal .card-item {
+  .book-exchange-modal .card-item {
+    width: 80px;
+  }
+  .book-exchange-modal .img-wrapper {
+    height: 5em;
     width: auto;
+  }
+  .book-exchange-modal .img-wrapper img {
+    height: 5em;
+  }
+  .book-exchange-modal .exchange-book-card-body .card-title {
+    font-size: 10px;
+    padding: 10px 0 0 0;
+  }
+  .book-exchange-modal .book-exchange-icon {
+    font-size: 30px;
+  }
+  .book-exchange-modal .modal-footer.book-exchange-modal-footer {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
 }
 @media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -15122,7 +15150,6 @@ h6,
 
 .book-card-links {
   display: block;
-  /* Landscape */
 }
 .book-card-links a {
   padding: 4px 10px;
@@ -15132,17 +15159,17 @@ h6,
 .book-card-links a:hover {
   color: #8b6ccb;
 }
-@media screen and (min-width: 1400px) {
+@media (max-width: 991.98px) {
   .book-card-links .mobile-break {
     display: none;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 1023.98px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+@media (min-width: 1400px) {
   .book-card-links .mobile-break {
     display: none;
   }
 }
-@media only screen and (width: 1024px) and (resolution: 163dpi) {
+@media (min-width: 992px) and (max-width: 1366px) {
   .book-card-links .mobile-break {
     display: block;
   }
