@@ -64,6 +64,9 @@
 }
 
 .book-exchange-modal{
+    .btn-check:checked + label>.suggested-book{
+        box-shadow: 0px 0px 1px 4px #486edd;
+      }
     .card-item{
         margin-right: 10px;
         -webkit-box-flex: 0;
@@ -97,12 +100,32 @@
     .card-title {
         padding: 10px 0 15px 0;
     }
+    label.lbl-radio{
+        display:flex;
+    }
     @media (max-width: 768px) { 
         .exchange-icon{
             transform: rotate(90deg)
         }
-        .img-wrapper,.card-item {
+        .card-item {
+            width:80px;
+        }
+        .img-wrapper{
+            height: 5em;
             width:auto;
+        }
+        .img-wrapper img{
+            height: 5em;
+        }
+        .exchange-book-card-body .card-title {
+            font-size: 10px;
+            padding: 10px 0 0 0;
+        }
+        .book-exchange-icon {
+            font-size: 30px;
+        }
+        .modal-footer.book-exchange-modal-footer{
+            justify-content: center !important;
         }
     }
     /* Landscape */
@@ -189,19 +212,19 @@
             
         }
     }
-    @media screen and (min-width: 1400px) {
+    
+    @media (max-width: 991.98px) {
         .mobile-break {
             display: none;
         }
     }
-    /* Landscape */
-    @media only screen and (min-device-width: 320px) and (max-device-width: 1023.98px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) 
-    {
+    @media (min-width: 1400px) {
         .mobile-break {
             display: none;
         }
     }
-    @media only screen and (width:1024px) and (resolution: 163dpi) {
+    
+    @media (min-width: 992px) and (max-width:1366px){
         .mobile-break {
             display: block;
         }

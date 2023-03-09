@@ -9,25 +9,56 @@
   let current_open_page_mob = 1;
   let numOfPages_mob = 10;
   let maxState_mob = numOfPages;
-    
+  screen.addEventListener("orientationchange", function () {
+    console.log("The orientation of the screen is: " + screen.orientation);
+  });
   
-  $(document).ready(function () {
-    if(window.matchMedia("(max-width: 575.98px)").matches){
+  $(document).ready(async function () {
+    if(window.matchMedia("(max-width: 1199.98px)").matches){   //mobile and tablets 
       $('#book-Desktop').hide();
       $('#btnDesktopDiv').hide();
       
       $('#book-mobile').show();
       $('#btnMobileDiv').show();
     }
-    else if(window.matchMedia("(min-width: 992px)").matches){
+    else if(window.matchMedia("(min-width: 1200px)").matches){    //desktop and large devices
       $('#book-Desktop').show();
       $('#btnDesktopDiv').show();
 
       $('#book-mobile').hide();
       $('#btnMobileDiv').hide();
     }
+     
   });
 
+
+  document.querySelector("#btnOkPortrait").addEventListener('click', function() {
+    if(document.documentElement.requestFullscreen){
+      console.log(document.querySelector("#mobile-container"));
+      document.querySelector("#mobile-container").requestFullscreen();
+    }
+    else if(document.documentElement.webkitRequestFullScreen){
+      document.querySelector("#mobile-container").webkitRequestFullScreen();
+    }
+    screen.orientation.lock("portrait-primary")
+      .then(function() {
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  });
+
+  // upon unlock
+  document.querySelector("#btnCloseBook").addEventListener('click', function() {
+      screen.orientation.unlock();
+      console.log("unlocked!");
+  });
+
+  $(document).ready(function () {
+    if (window.screen.height > window.screen.width) {
+      //$('#staticBackdrop').modal('show');
+    }
+  });
 
   function store_next(){
     var xhttp = new XMLHttpRequest();
@@ -82,8 +113,6 @@
     $('#exampleModal').modal('hide');
     $('#feedback-modal').modal('show');
   }
-
-
   
   function getImage(){
     document.querySelector('#b'+current_open_page+ ' .cover-img').setAttribute('src', 'storage/app/public/book_image/9781612119274-'+(current_open_page*2)+'.jpg')
@@ -122,26 +151,25 @@
       current_open_page_mob--;
       document.querySelector('#f_page').textContent = current_open_page_mob * 2 - 2
     }
-}
-function goMobileFirst(){
-  if(current_open_page_mob > 1){
-    goToPage = current_open_page_mob - 1;
-    for(goToPage; goToPage >= 1; goToPage-- ){
-        selectPage = document.querySelector('#pm'+goToPage);
-        selectPage.style.zIndex = maxState_mob - goToPage;
-        selectPage.classList.remove("flipped");
-     }
-     current_open_page_mob = 1
-    //store_next();
-    closeMobileBook(true);
-    play_flip_sound();
-    document.querySelector('#f_page').textContent = current_open_page_mob * 2
   }
-}
+  function goMobileFirst(){
+    if(current_open_page_mob > 1){
+      goToPage = current_open_page_mob - 1;
+      for(goToPage; goToPage >= 1; goToPage-- ){
+          selectPage = document.querySelector('#pm'+goToPage);
+          selectPage.style.zIndex = maxState_mob - goToPage;
+          selectPage.classList.remove("flipped");
+      }
+      current_open_page_mob = 1
+      //store_next();
+      closeMobileBook(true);
+      play_flip_sound();
+      document.querySelector('#f_page').textContent = current_open_page_mob * 2
+    }
+  }
 
   function goNext() {
       if(current_open_page < maxState) {
-
         selectPage = document.querySelector('#p'+current_open_page);
         selectPage.style.zIndex = current_open_page;
         selectPage.classList.add("flipped");
@@ -157,8 +185,8 @@ function goMobileFirst(){
         // getImage();
         document.querySelector('#f_page').textContent = current_open_page > 1 ? current_open_page * 2 : current_open_page
         current_open_page++;
-    }
-}
+      }
+  }
 
   function goPrevious() {
       if(current_open_page > 1) {
@@ -188,53 +216,50 @@ function goMobileFirst(){
         selectPage.classList.remove("flipped");
      }
      current_open_page = 1
-    store_next();
-    closeDesktopBook(true);
-    play_flip_sound();
-    document.querySelector('#f_page').textContent = current_open_page * 2
+      store_next();
+      closeDesktopBook(true);
+      play_flip_sound();
+      document.querySelector('#f_page').textContent = current_open_page * 2
+    }
   }
-}
 
-function openDesktopBook() {
-  document.querySelector('#book-Desktop').style.transform = "translateX(50%)";
-}
-
-function closeDesktopBook(isFirstPage) {
-  if(isFirstPage) {
-    document.querySelector('#book-Desktop').style.transform = "translateX(0%)";
-  } else {
-    document.querySelector('#book-Desktop').style.transform = "translateX(100%)";
-    $('#txtAlertMessageModal').html("End of the book");
-    $('#AlertMessageModal').modal('show');
+  function openDesktopBook() {
+    document.querySelector('#book-Desktop').style.transform = "translateX(50%)";
   }
-}
-function closeMobileBook(isFirstPage) {
-  if(isFirstPage) {
-    document.querySelector('#book-mobile').style.transform = "translateX(0%)";
-  } else {
-    document.querySelector('#book-mobile').style.transform = "translateX(-180%)";
-    $('#txtAlertMessageModal').html("End of the book");
-    $('#AlertMessageModal').modal('show');
 
+  function closeDesktopBook(isFirstPage) {
+    if(isFirstPage) {
+      document.querySelector('#book-Desktop').style.transform = "translateX(0%)";
+    } else {
+      document.querySelector('#book-Desktop').style.transform = "translateX(100%)";
+      $('#txtAlertMessageModal').html("End of the book");
+      $('#AlertMessageModal').modal('show');
+    }
   }
-}
+  function closeMobileBook(isFirstPage) {
+    if(isFirstPage) {
+      document.querySelector('#book-mobile').style.transform = "translateX(0%)";
+    } else {
+      document.querySelector('#book-mobile').style.transform = "translateX(-180%)";
+      $('#txtAlertMessageModal').html("End of the book");
+      $('#AlertMessageModal').modal('show');
+      document.querySelector("#btnAlertClose").addEventListener('click', function(){
+        document.querySelector("#btnCloseBook").click();
+      });
+    }
+  }
 
-
-function toggleSound(element){
-  if(sound === true) {
-    html_string =  '<i class="fa-solid fa-volume-mute"></i>' ;
-    sound = false;
-  }else{
-     html_string =  '<i class="fa-solid fa-volume-up"></i>' ;
-     sound = true;
-   }
-  //  alert(element.innerHTML)
-  element.innerHTML = html_string
-}
-  //</script>
-
-
-//<script>
+  function toggleSound(element){
+    if(sound === true) {
+      html_string =  '<i class="fa-solid fa-volume-mute"></i>' ;
+      sound = false;
+    }else{
+      html_string =  '<i class="fa-solid fa-volume-up"></i>' ;
+      sound = true;
+    }
+    //  alert(element.innerHTML)
+    element.innerHTML = html_string
+  }
 
   $(document).on('click', '.emoji_size', function () {
     rating = $(this).attr('rating');
@@ -252,15 +277,29 @@ function toggleSound(element){
 
   })
 
-
-//</script>
-
-
-
-//<script>
-  // $(document).bind("contextmenu", function (e) {
-  //     return false;
-  // });
+  function lock (orientation) {
+    let de = document.documentElement;
+    if (de.requestFullscreen) { de.requestFullscreen(); }
+    else if (de.mozRequestFullScreen) { de.mozRequestFullScreen(); }
+    else if (de.webkitRequestFullscreen) { de.webkitRequestFullscreen(); }
+    else if (de.msRequestFullscreen) { de.msRequestFullscreen(); }
+  
+    screen.orientation.lock(orientation);
+    alert("portrait locked");
+    console.log("locked");
+  }
+  
+  function unlock () {
+    // (B1) UNLOCK FIRST
+    screen.orientation.unlock();
+  
+    // (B2) THEN EXIT FULL SCREEN
+    if (document.exitFullscreen) { document.exitFullscreen(); }
+    else if (document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+    else if (document.mozCancelFullScreen) { document.mozCancelFullScreen(); }
+    else if (document.msExitFullscreen) { document.msExitFullscreen(); }
+    console.log("unlocked");
+  }
 
   document.addEventListener("keyup", function (e) {
       var keyCode = e.keyCode ? e.keyCode : e.which;
@@ -288,27 +327,25 @@ function toggleSound(element){
       }
   }
   setInterval("AccessClipboardData()", 300);
-//</script>
 
-//<script>
-document.addEventListener('keydown', function(e) {
-    switch (e.keyCode) {
-        case 37:
-            // alert('left');
-            goPrevious();
-            break;
-        case 38:
-          //  alert('up');
-            break;
-        case 39:
-          goNext();
-            // alert('right');
-            break;
-        case 40:
-            // alert('down');
-            break;
-    }
-});
+  document.addEventListener('keydown', function(e) {
+      switch (e.keyCode) {
+          case 37:
+              // alert('left');
+              goPrevious();
+              break;
+          case 38:
+            //  alert('up');
+              break;
+          case 39:
+            goNext();
+              // alert('right');
+              break;
+          case 40:
+              // alert('down');
+              break;
+      }
+  });
 
 
 
