@@ -56,7 +56,7 @@
 
   $(document).ready(function () {
     if (window.screen.height > window.screen.width) {
-      //$('#staticBackdrop').modal('show');
+      $('#staticBackdrop').modal('show');
     }
   });
 
