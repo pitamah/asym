@@ -4,7 +4,6 @@
 
 --------------------------------------------------------------*/
 
-
 /*--------------------------------------------------------------
 # Icons list page
 --------------------------------------------------------------*/
@@ -17,14 +16,14 @@
 
   .icon {
     background-color: #fff;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     text-align: center;
     color: #012970;
     padding: 15px 0;
   }
 
   i {
-    margin: .25rem;
+    margin: 0.25rem;
     font-size: 2.5rem;
   }
 
@@ -33,20 +32,18 @@
     display: inline-block;
     width: 100%;
     overflow: hidden;
-    padding: .25rem;
+    padding: 0.25rem;
     font-size: 12px;
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #666;
   }
-
 }
 
 /*--------------------------------------------------------------
 # Profie Page
 --------------------------------------------------------------*/
 .profile {
-
   .profile-card {
     img {
       max-width: 120px;
@@ -67,12 +64,12 @@
       a {
         font-size: 20px;
         display: inline-block;
-        color: rgba($secondary, .5);
+        color: rgba($secondary, 0.5);
         line-height: 0;
         margin-right: 10px;
         transition: 0.3s;
         &:hover {
-          color: rgba($secondary,  1);
+          color: rgba($secondary, 1);
         }
       }
     }
@@ -87,32 +84,29 @@
     .card-title {
       color: $secondary;
     }
-    
+
     .label {
       font-weight: 600;
-      color: rgba($secondary, .6);
+      color: rgba($secondary, 0.6);
     }
   }
 
   .profile-edit {
-    
     label {
       font-weight: 600;
-      color: rgba($secondary, .6);
+      color: rgba($secondary, 0.6);
     }
 
     img {
       max-width: 120px;
     }
   }
-
 }
 
 /*--------------------------------------------------------------
 # F.A.Q Page
 --------------------------------------------------------------*/
 .faq {
-
   .basic {
     h6 {
       font-size: 18px;
@@ -124,15 +118,13 @@
       color: lighten($tertiary, 30);
     }
   }
-
 }
-
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact {
 
+.contact {
   .info-box {
     padding: 28px 30px;
     i {
@@ -154,11 +146,9 @@
       font-size: 14px;
       margin-bottom: 0;
     }
-
   }
 
   .php-email-form {
-
     .error-message {
       display: none;
       color: #fff;
@@ -185,7 +175,7 @@
       text-align: center;
       padding: 15px;
       margin-bottom: 24px;
-  
+
       &:before {
         content: "";
         display: inline-block;
@@ -197,10 +187,10 @@
         border-top-color: #eee;
         animation: animate-loading 1s linear infinite;
       }
-  
     }
 
-    input, textarea {
+    input,
+    textarea {
       border-radius: 0;
       box-shadow: none;
       font-size: 14px;
@@ -216,7 +206,7 @@
 
     textarea {
       padding: 12px 15px;
-    } 
+    }
 
     button[type="submit"] {
       background: $primary;
@@ -229,12 +219,15 @@
         background: lighten($primary, 5);
       }
     }
-  
   }
-  
+
   @keyframes animate-loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
@@ -273,34 +266,45 @@
       max-width: 50%;
     }
   }
-
 }
 
-.pagination > li > a
-{
-    background-color: white;
-    color: $primary;
+.pagination > li > a {
+  background-color: white;
+  color: $primary;
 }
 
 .pagination > li > a:focus,
 .pagination > li > a:hover,
 .pagination > li > span:focus,
-.pagination > li > span:hover
-{
-    color: #5a5a5a;
-    background-color: #eee;
-    border-color: #ddd;
+.pagination > li > span:hover {
+  color: #5a5a5a;
+  background-color: #eee;
+  border-color: #ddd;
 }
 
-.pagination > .active > a
-{
-    color: white;
-    background-color: $primary !Important;
-    border: solid 1px $primary !Important;
+.pagination > .active > a {
+  color: white;
+  background-color: $primary !important;
+  border: solid 1px $primary !important;
 }
 
-.pagination > .active > a:hover
-{
-    background-color: $primary !Important;
-    border: solid 1px $primary;
+.pagination > .active > a:hover {
+  background-color: $primary !important;
+  border: solid 1px $primary;
+}
+
+// Policy Pages
+
+.policy-ul {
+  font-size: 14px;
+  line-height: 30px;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.policy-h6 {
+  line-height: 30px;
 }
