@@ -624,6 +624,22 @@
     </div>
   </div>
 
+  <div class="modal fade" id="CloseBookModal" tabindex="-1" aria-labelledby="CloseBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="d-grid gap-2 m-3">
+            <p>Are you sure you want to close this book ?</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btnCloseYes" type="button" class="btn btn-primary" onclick="CloseBookShowLibrary();" aria-label="Yes">Yes</button>
+          <button id="btnCloseNo" type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="No">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="AlertMessageModal" tabindex="-1" aria-labelledby="AlertMessageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
