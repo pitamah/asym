@@ -113,6 +113,12 @@
     $('#exampleModal').modal('hide');
     $('#feedback-modal').modal('show');
   }
+
+  function CloseBookShowLibrary(){
+    $('#CloseBookModal').modal('hide');
+    var url = document.getElementById('btnCloseBook').href;
+    window.location=url;
+  }
   
   function getImage(){
     document.querySelector('#b'+current_open_page+ ' .cover-img').setAttribute('src', 'storage/app/public/book_image/9781612119274-'+(current_open_page*2)+'.jpg')
@@ -243,9 +249,9 @@
       document.querySelector('#book-mobile').style.transform = "translateX(-180%)";
       $('#txtAlertMessageModal').html("End of the book");
       $('#AlertMessageModal').modal('show');
-      document.querySelector("#btnAlertClose").addEventListener('click', function(){
-        document.querySelector("#btnCloseBook").click();
-      });
+      // document.querySelector("#btnAlertClose").addEventListener('click', function(){
+      //   document.querySelector("#btnCloseBook").click();
+      // });
     }
   }
 

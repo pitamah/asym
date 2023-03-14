@@ -13400,7 +13400,7 @@ textarea.form-control-lg {
 }
 .header .toggle-sidebar-btn {
   font-size: 32px;
-  padding-left: 10px;
+  padding-right: 10px;
   cursor: pointer;
   color: #486EDD;
 }
@@ -15114,6 +15114,35 @@ h6,
 .book-card .row {
   height: 100%;
 }
+@media (max-width: 575.98px) {
+  .book-card .thumbnail-fluid {
+    min-height: 180px;
+    width: 80%;
+    height: 240px;
+  }
+  .book-card .image-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .book-card a#myvideo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .book-card a#myvideo .thumbnail-fluid {
+    min-height: 180px;
+    width: 80%;
+    height: 240px;
+  }
+}
 
 .book-card-body {
   padding: 15px;
@@ -15543,7 +15572,6 @@ h4#riddle-answer-modal, #riddle-answer-modal.h4 {
 
 .for-next-prev-btn {
   text-align: center;
-  padding-top: 40px;
 }
 
 .btn-next-prev {
