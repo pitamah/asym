@@ -158,6 +158,27 @@
     .row {
         height: 100%;
     }
+    @media (max-width: 575.98px) {
+        .thumbnail-fluid {
+            min-height: 180px;
+            width: 80%;
+            height: 240px;
+        }
+        .image-wrapper  {
+            display:flex;
+            justify-content: center;
+        }
+        a#myvideo{
+            display:flex;
+            justify-content: center;
+            width:100%;
+            .thumbnail-fluid {
+                min-height: 180px;
+                width: 80%;
+                height: 240px;
+            }
+        }
+    }
 }
 
 .book-card-body {
